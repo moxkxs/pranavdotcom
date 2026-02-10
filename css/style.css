@@ -70,7 +70,7 @@ header {
     );
     background-size: 200% 100%;
     margin: 50px 0;
-    animation: sheen 3s linear infinite;
+    animation: sheen 4s linear infinite;
     position: relative;
     z-index: 2;
 }
