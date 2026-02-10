@@ -70,7 +70,7 @@ header {
     );
     background-size: 200% 100%;
     margin: 50px 0;
-    animation: sheen 5s linear infinite;
+    animation: sheen 4s linear infinite;
     position: relative;
     z-index: 2;
 }
@@ -130,6 +130,7 @@ h2 {
     font-size: 4.2rem;
     font-weight: 700;
     margin-bottom: 0;
+    color: #D4B5F0;
 }
 
 /* Intro paragraph with sheen */
@@ -139,11 +140,11 @@ h2 {
     margin-top: 0;
     background: linear-gradient(
         90deg,
-        #c0c0c0 0%,
-        #c0c0c0 40%,
-        #FFFFFF 50%,
-        #c0c0c0 60%,
-        #c0c0c0 100%
+        #B794D6 0%,
+        #B794D6 40%,
+        #E8D8F0 50%,
+        #B794D6 60%,
+        #B794D6 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
@@ -154,14 +155,14 @@ h2 {
 
 /* Regular paragraphs */
 p {
-    color: #cccccc;
+    color: #E0D8E8;
     margin-bottom: 20px;
 }
 
 /* Section labels */
 .section-label {
     font-size: 0.95rem;
-    color: #666666;
+    color: #A89CB8;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -216,20 +217,20 @@ p {
 .experience-box h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #EDE7F4;
+    color: #B794D6;
     margin-bottom: 3px;
 }
 
 /* Dates - LIGHT GRAY */
 .experience-box .experience-dates {
-    color: #999999;
+    color: #A89CB8;
     font-size: 0.85rem;
     margin-bottom: 10px;
 }
 
 /* Description - LIGHT GRAY */
 .experience-box .experience-description {
-    color: #cccccc;
+    color: #E0D8E8;
     font-size: 0.9rem;
     margin-bottom: 0;
     line-height: 1.6;
@@ -260,10 +261,11 @@ p {
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: 600;
+    color: #B794D6;
 }
 
 .numbered-section p {
-    color: #999999;
+    color: #E0D8E8;
     font-size: 1rem;
 }
 
@@ -358,14 +360,14 @@ p {
 
 .post-date {
     font-size: 0.85rem;
-    color: #999999;
+    color: #A89CB8;
     margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
 
 .post-summary {
     font-size: 1rem;
-    color: #cccccc;
+    color: #E0D8E8;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -455,7 +457,7 @@ p {
 
 .project-date {
     font-size: 0.85rem;
-    color: #999999;
+    color: #A89CB8;
     margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
@@ -498,7 +500,7 @@ p {
 }
 
 .about-content p {
-    color: #cccccc;
+    color: #E0D8E8;
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 20px;
@@ -649,7 +651,7 @@ p {
 
 .book-note {
     font-size: 0.95rem;
-    color: #cccccc;
+    color: #E0D8E8;
     line-height: 1.6;
     margin-bottom: 0;
 }
