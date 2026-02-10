@@ -139,17 +139,17 @@ h2 {
     margin-top: 0;
     background: linear-gradient(
         90deg,
-        #d5d5d5 0%,
-        #d5d5d5 40%,
+        #d0d0d0 0%,
+        #d0d0d0 40%,
         #FFFFFF 50%,
-        #d5d5d5 60%,
-        #d5d5d5 100%
+        #d0d0d0 60%,
+        #d0d0d0 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: sheen 5s linear infinite;
+    animation: sheen 3s linear infinite;
 }
 
 /* Regular paragraphs */
