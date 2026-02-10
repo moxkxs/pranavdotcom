@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf - Pranav Kandlakunta</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="dotGrid"></canvas>
+    
+    <header>
+        <h1 class="logo">pranavdotcom</h1>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="writing.html">writing</a>
+            <a href="projects.html">projects</a>
+            <a href="bookshelf.html">bookshelf</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2 class="page-title">Bookshelf</h2>
+        
+        <p class="intro">
+            Books that shaped how I think about markets, probability, and decision-making.
+        </p>
+        
+        <div class="separator"></div>
+        
+        <!-- Reading Stats -->
+        <div class="reading-stats">
+            <div class="stat-item">
+                <span class="stat-number">47</span>
+                <span class="stat-label">Off The Shelf</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">123</span>
+                <span class="stat-label">On The Shelf</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Trying To Read</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7th</span>
+                <span class="stat-label">Grade Reading Level</span>
+            </div>
+        </div>
+        
+        <!-- Currently Reading Section -->
+        <section class="books-section">
+            <h3 class="section-heading">
+                <span class="reading-indicator active"></span>
+                Currently Reading
+            </h3>
+            
+            <div class="book-card current-reading">
+                <div class="book-info">
+                    <h4 class="book-title">Dynamic Hedging</h4>
+                    <p class="book-author">Nassim Nicholas Taleb</p>
+                    <div class="book-meta">
+                        <span class="book-category">Options</span>
+                        <span class="book-category">Risk</span>
+                    </div>
+                    <p class="book-note">The definitive guide to managing option books. Dense, technical, and full of practitioner wisdom that you won't find in academic texts.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Markets & Trading -->
+        <section class="books-section">
+            <h3 class="section-heading">Markets & Trading</h3>
+            
+            <div class="book-card">
+                <div class="book-info">
+                    <h4 class="book-title">Reminiscences of a Stock Operator</h4>
+                    <p class="book-author">Edwin Lefèvre</p>
+                    <div class="book-meta">
+                        <span class="book-category">Trading</span>
+                        <span class="book-rating">★★★★★</span>
+                    </div>
+                    <p class="book-note">Fictionalized biography of Jesse Livermore. The psychology of trading hasn't changed in 100 years.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Probability & Statistics -->
+        <section class="books-section">
+            <h3 class="section-heading">Probability & Statistics</h3>
+            
+            <div class="book-card">
+                <div class="book-info">
+                    <h4 class="book-title">Probability Theory: The Logic of Science</h4>
+                    <p class="book-author">E.T. Jaynes</p>
+                    <div class="book-meta">
+                        <span class="book-category">Probability</span>
+                        <span class="book-rating">★★★★★</span>
+                    </div>
+                    <p class="book-note">Probability as extended logic. Changed how I think about uncertainty and inference.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Classics & Philosophy -->
+        <section class="books-section">
+            <h3 class="section-heading">Classics & Philosophy</h3>
+            
+            <div class="book-card">
+                <div class="book-info">
+                    <h4 class="book-title">Gödel, Escher, Bach</h4>
+                    <p class="book-author">Douglas Hofstadter</p>
+                    <div class="book-meta">
+                        <span class="book-category">Philosophy</span>
+                        <span class="book-rating">★★★★★</span>
+                    </div>
+                    <p class="book-note">Strange loops, self-reference, and consciousness. Dense but worth the effort.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Up Next -->
+        <section class="books-section">
+            <h3 class="section-heading">
+                <span class="reading-indicator queue"></span>
+                Up Next
+            </h3>
+            
+            <div class="book-list-compact">
+                <div class="compact-book">
+                    <span class="compact-title">Trading and Exchanges</span>
+                    <span class="compact-author">— Larry Harris</span>
+                </div>
+                <div class="compact-book">
+                    <span class="compact-title">The Volatility Surface</span>
+                    <span class="compact-author">— Jim Gatheral</span>
+                </div>
+            </div>
+        </section>
+        
+        <div class="separator"></div>
+        
+        <nav class="footer-nav">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="writing.html">writing</a>
+            <a href="projects.html">projects</a>
+            <a href="bookshelf.html">bookshelf</a>
+        </nav>
+        
+        <!-- Social media icons -->
+        <div class="social-icons">
+            <a href="https://x.com/pbkandlakunta?lang=en" target="_blank" aria-label="Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/pranavkandlakunta" target="_blank" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://github.com/moxkxs" target="_blank" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="mailto:pby5ws@virgina.edu" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </main>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
