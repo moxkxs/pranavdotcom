@@ -149,7 +149,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: sheen 4s linear infinite;
+    animation: sheen 5s linear infinite;
 }
 
 /* Regular paragraphs */
