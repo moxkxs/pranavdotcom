@@ -7,7 +7,7 @@
 
 body {
     background-color: #0a0a0a;
-    color: #EDE7F4;
+    color: #B794D6;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     padding: 40px 20px;
@@ -89,7 +89,7 @@ header {
 
 /* Navigation */
 nav a {
-    color: #999999;
+    color: #A89CB8;
     text-decoration: none;
     margin-left: 20px;
     font-size: 0.9rem;
@@ -97,7 +97,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF6B35;
+    color: #D4B5F0;
 }
 
 /* Main content container */
@@ -277,7 +277,7 @@ p {
 }
 
 .footer-nav a {
-    color: #999999;
+    color: #A89CB8;
     text-decoration: none;
     margin-right: 20px;
     font-size: 0.9rem;
@@ -285,7 +285,7 @@ p {
 }
 
 .footer-nav a:hover {
-    color: #FF6B35;
+    color: #D4B5F0;
 }
 
 /* Social media icons */
@@ -298,7 +298,7 @@ p {
 }
 
 .social-icons a {
-    color: #666666;
+    color: #A89CB8;
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
@@ -318,6 +318,7 @@ p {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
+    color: #C8A5E8;
 }
 
 /* Tighter intro spacing on writing page */
@@ -347,13 +348,13 @@ p {
 }
 
 .post-link:hover .post-title {
-    color: #FF6B35;
+    color: #D4B5F0;
 }
 
 .post-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #EDE7F4;
+    color: #B794D6;
     margin-bottom: 8px;
     transition: color 0.3s ease;
 }
@@ -431,7 +432,7 @@ p {
 }
 
 .project-link:hover .project-title {
-    color: #FF6B35;
+    color: #D4B5F0;
 }
 
 .project-link:hover .project-banner {
@@ -450,7 +451,7 @@ p {
 .project-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #EDE7F4;
+    color: #B794D6;
     margin-bottom: 8px;
     transition: color 0.3s ease;
 }
@@ -464,7 +465,7 @@ p {
 
 .project-summary {
     font-size: 1rem;
-    color: #cccccc;
+    color: #E0D8E8;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -490,7 +491,7 @@ p {
 .about-heading {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #EDE7F4;
+    color: #C8A5E8;
     margin-top: 50px;
     margin-bottom: 20px;
 }
@@ -540,7 +541,7 @@ p {
 .stat-label {
     display: block;
     font-size: 0.85rem;
-    color: #999999;
+    color: #A89CB8;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -552,7 +553,7 @@ p {
 
 .section-heading {
     font-size: 0.95rem;
-    color: #666666;
+    color: #A89CB8;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -575,7 +576,7 @@ p {
 }
 
 .reading-indicator.queue {
-    background-color: #666666;
+    background-color: #A89CB8;
 }
 
 @keyframes pulse-indicator {
@@ -614,13 +615,13 @@ p {
 .book-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #EDE7F4;
+    color: #B794D6;
     margin-bottom: 8px;
 }
 
 .book-author {
     font-size: 1rem;
-    color: #999999;
+    color: #A89CB8;
     margin-bottom: 15px;
     font-style: italic;
 }
@@ -678,13 +679,13 @@ p {
 
 .compact-title {
     font-size: 1rem;
-    color: #EDE7F4;
+    color: #B794D6;
     font-weight: 500;
 }
 
 .compact-author {
     font-size: 0.9rem;
-    color: #999999;
+    color: #A89CB8;
     margin-left: 8px;
 }
 
