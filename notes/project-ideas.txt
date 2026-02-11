@@ -4,6 +4,8 @@
 4. YC Bootstrapper
 5. Rust-based OS kernel
 6. Kalshi trading bot in Python
+7. Custom MCP server and rust client
+8. Custom Account Catalogging and Account deletion service
 
 GOAL - One writeup / project per week
 
