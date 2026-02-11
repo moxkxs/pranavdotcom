@@ -1,0 +1,8 @@
+1. Cooking
+2. Reading more
+3. Why rust is interesting
+4. Trying to limit data stealing
+5. Neat history
+6. Some cute quant stuff
+
+GOAL - One writeup / project per week

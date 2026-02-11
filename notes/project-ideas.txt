@@ -1,0 +1,9 @@
+1. Rust-based browser
+2. Basic Macro Futures Signal Platform
+3. Swap Pricer
+4. YC Bootstrapper
+5. Rust-based OS kernel
+6. Kalshi trading bot in Python
+
+GOAL - One writeup / project per week
+
