@@ -1,3 +1,40 @@
+/* Iosevka via Fontsource CDN */
+@font-face {
+    font-family: "Iosevka Web";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-400-normal.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Iosevka Web";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-500-normal.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Iosevka Web";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-600-normal.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Iosevka Web";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-700-normal.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Iosevka Web";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-400-italic.woff2) format("woff2");
+}
+
 /* Reset and base */
 * {
     margin: 0;
@@ -8,7 +45,7 @@
 body {
     background-color: #0a0a0a;
     color: #EDE7F4;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: "Iosevka Web", monospace;
     line-height: 1.6;
     padding: 40px 20px;
     position: relative;
@@ -647,6 +684,220 @@ p {
 /* ===================== */
 /* Responsive */
 /* ===================== */
+
+
+/* ===================== */
+/* Blog Post Pages       */
+/* ===================== */
+
+.post {
+    margin-bottom: 40px;
+}
+
+.post-back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #999999;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.post-back-link:hover {
+    color: #FF6B35;
+}
+
+.post-page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #EDE7F4;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.post-page-date {
+    font-size: 0.85rem;
+    color: #999999;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+}
+
+.post-body {
+    max-width: 100%;
+}
+
+.post-body p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.post-body h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #EDE7F4;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.post-body strong {
+    color: #EDE7F4;
+    font-weight: 600;
+}
+
+.post-body em {
+    font-style: italic;
+    color: #bbbbbb;
+}
+
+/* Inline code */
+.post-body code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #FF8C00;
+}
+
+/* Code blocks */
+.post-body pre {
+    background-color: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+}
+
+.post-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Blockquotes */
+.post-body blockquote {
+    border-left: 3px solid #FF6B35;
+    padding-left: 20px;
+    margin: 24px 0;
+}
+
+.post-body blockquote p {
+    color: #999999;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Lists */
+.post-body ul,
+.post-body ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.post-body li {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.post-body ul li::marker {
+    color: #FF6B35;
+}
+
+.post-body ol li::marker {
+    color: #FF6B35;
+    font-weight: 600;
+}
+
+/* Tables */
+.post-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+}
+
+.post-table th {
+    text-align: left;
+    padding: 10px 14px;
+    color: #EDE7F4;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 107, 53, 0.4);
+    background-color: rgba(42, 24, 16, 0.3);
+}
+
+.post-table td {
+    padding: 10px 14px;
+    color: #cccccc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.post-table tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Figures / Images */
+.post-figure {
+    margin: 30px 0;
+}
+
+.post-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.post-figure figcaption {
+    font-size: 0.8rem;
+    color: #777777;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Inline links */
+.post-link-inline {
+    color: #FF6B35;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.post-link-inline:hover {
+    border-bottom-color: #FF6B35;
+}
+
+/* Post divider (hr within post) */
+.post-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 40px 0 24px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .post-page-title {
+        font-size: 1.5rem;
+    }
+    .post-body pre {
+        padding: 14px;
+        font-size: 0.8rem;
+    }
+    .post-table {
+        font-size: 0.8rem;
+    }
+    .post-table th,
+    .post-table td {
+        padding: 8px 10px;
+    }
+}
 
 @media (max-width: 768px) {
     h2 { font-size: 2rem; }
