@@ -687,21 +687,18 @@ p {
 
 .post-body {
     max-width: 100%;
-    flex: 1;
-    min-width: 0;
 }
 /* Post layout with TOC sidebar */
 .post-layout {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
+    position: relative;
 }
 
 .post-toc {
     position: sticky;
     top: 40px;
-    flex-shrink: 0;
+    float: left;
     width: 180px;
+    margin-left: -230px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -719,8 +716,8 @@ p {
 }
 
 .post-toc a:hover {
-    color: #999999;
-    border-left-color: rgba(255, 255, 255, 0.15);
+    color: #cccccc;
+    border-left-color: #FF6B35;
 }
 
 .post-toc a.active {
@@ -728,10 +725,7 @@ p {
     border-left-color: #FF6B35;
 }
 
-@media (max-width: 860px) {
-    .post-layout {
-        display: block;
-    }
+@media (max-width: 1100px) {
     .post-toc {
         display: none;
     }
