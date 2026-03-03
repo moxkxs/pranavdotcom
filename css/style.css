@@ -163,12 +163,12 @@ p {
     margin-bottom: 0;
 }
 
-/* Simple date + title rows (writing posts) */
+/* Simple date + title + description rows (writing posts) */
 .recent-post-item {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 20px;
-    padding: 14px 0;
+    padding: 18px 0;
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     transition: all 0.2s ease;
@@ -176,6 +176,19 @@ p {
 
 .recent-post-item:hover .recent-post-title {
     color: #FF6B35;
+}
+
+.recent-post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.recent-post-summary {
+    font-size: 0.9rem;
+    color: #999999;
+    line-height: 1.5;
+    display: block;
 }
 
 /* Image post cards (projects) */
@@ -220,6 +233,8 @@ p {
     color: #666666;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Consolas', monospace;
     flex-shrink: 0;
+    min-width: 90px;
+    padding-top: 2px;
 }
 
 .recent-post-title {
