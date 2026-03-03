@@ -29,10 +29,20 @@
             <h2 class="post-page-title">Reflexivity in Financial Markets</h2>
             <p class="post-page-date">February 8, 2026</p>
             
-            <div class="post-body">
+            <div class="post-layout">
+                <nav class="post-toc">
+                    <a href="#feedback-loop">The Feedback Loop</a>
+                    <a href="#simple-model">A Simple Model</a>
+                    <a href="#three-regimes">Three Regimes of Market Behavior</a>
+                    <a href="#implications">Implications for Systematic Trading</a>
+                    <a href="#empirical">An Empirical Look</a>
+                    <a href="#closing">Closing Thoughts</a>
+                </nav>
+                
+                <div class="post-body">
                 <p>The concept of reflexivity suggests that participants' perceptions actively shape the reality they're trying to predict, creating feedback loops that traditional models fail to capture. George Soros first formalized this idea in his 1987 work <em>The Alchemy of Finance</em>, arguing that financial markets are inherently unstable because of the circular relationship between perception and reality.</p>
                 
-                <h3>The Feedback Loop</h3>
+                <h3 id="feedback-loop">The Feedback Loop</h3>
                 
                 <p>In classical economics, markets are assumed to tend toward equilibrium. Prices reflect fundamentals, and deviations are corrected by rational actors. Reflexivity challenges this directly: market participants don't just passively observe reality — they actively alter it through their beliefs and actions.</p>
                 
@@ -42,7 +52,7 @@
                     <p>Financial markets, far from accurately reflecting all the available knowledge, always provide a distorted view of reality. The degree of distortion may vary from time to time. Sometimes it's negligible, at other times it's quite significant.</p>
                 </blockquote>
                 
-                <h3>A Simple Model</h3>
+                <h3 id="simple-model">A Simple Model</h3>
                 
                 <p>We can express the reflexive relationship between price and fundamentals with a basic formulation. Let <code>P(t)</code> represent the market price at time <code>t</code>, and <code>F(t)</code> represent the underlying fundamental value:</p>
                 
@@ -55,7 +65,7 @@ where:
                 
                 <p>When <code>β > 0</code>, positive momentum feeds back into price, creating self-reinforcing trends. When <code>β</code> approaches 1, the system becomes unstable — small perturbations can cascade into bubbles or crashes.</p>
                 
-                <h3>Three Regimes of Market Behavior</h3>
+                <h3 id="three-regimes">Three Regimes of Market Behavior</h3>
                 
                 <p>Based on the strength of reflexive feedback, markets tend to operate in one of three regimes:</p>
                 
@@ -65,7 +75,7 @@ where:
                     <li><strong>Regime transition</strong> — The critical phase where the market flips between states. These transitions are where the most violent price action occurs.</li>
                 </ol>
                 
-                <h3>Implications for Systematic Trading</h3>
+                <h3 id="implications">Implications for Systematic Trading</h3>
                 
                 <p>If reflexivity is real — and the evidence from every major bubble and crash suggests it is — then it has concrete implications for how we build trading systems:</p>
                 
@@ -76,7 +86,7 @@ where:
                     <li>Position sizing matters more than signal quality during regime transitions.</li>
                 </ul>
                 
-                <h3>An Empirical Look</h3>
+                <h3 id="empirical">An Empirical Look</h3>
                 
                 <p>Here's a rough Python sketch for detecting reflexive regimes using autocorrelation of returns:</p>
                 
@@ -103,11 +113,12 @@ def classify_regime(autocorr, threshold=0.15):
     else:
         return "reflexive_reversal"</code></pre>
                 
-                <h3>Closing Thoughts</h3>
+                <h3 id="closing">Closing Thoughts</h3>
                 
                 <p>The practical takeaway is that markets are not static systems with fixed parameters. They are adaptive, reflexive processes where the act of observation changes the thing being observed. Building systems that acknowledge this — that can detect when feedback loops are strengthening or weakening — is, I think, a genuine edge.</p>
                 
                 <p>More on this in a follow-up where I'll look at how reflexivity shows up in options markets through the volatility feedback effect.</p>
+            </div>
             </div>
         </article>
         
@@ -149,5 +160,25 @@ def classify_regime(autocorr, threshold=0.15):
     </main>
     
     <script src="../js/script.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var tocLinks = document.querySelectorAll('.post-toc a');
+        var sections = document.querySelectorAll('.post-body h3[id]');
+        if (!tocLinks.length || !sections.length) return;
+        function updateActive() {
+            var current = '';
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].getBoundingClientRect().top < 120) current = sections[i].id;
+            }
+            for (var j = 0; j < tocLinks.length; j++) {
+                tocLinks[j].classList.remove('active');
+                if (tocLinks[j].getAttribute('href') === '#' + current) tocLinks[j].classList.add('active');
+            }
+        }
+        window.addEventListener('scroll', updateActive);
+        updateActive();
+    });
+    </script>
 </body>
 </html>
