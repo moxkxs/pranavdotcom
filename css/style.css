@@ -163,6 +163,22 @@ p {
     margin-bottom: 0;
 }
 
+/* Simple date + title rows (writing posts) */
+.recent-post-item {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 14px 0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s ease;
+}
+
+.recent-post-item:hover .recent-post-title {
+    color: #FF6B35;
+}
+
+/* Image post cards (projects) */
 .post-card {
     display: block;
     text-decoration: none;
@@ -625,6 +641,11 @@ p {
     .page-title { font-size: 2rem; }
     
     .post-card-info {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .recent-post-item {
         flex-direction: column;
         gap: 4px;
     }
