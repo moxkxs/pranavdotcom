@@ -296,62 +296,92 @@ p {
 /* Projects */
 /* ===================== */
 
-.projects {
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
     margin-bottom: 0;
 }
 
-.project {
-    margin-bottom: 50px;
-}
-
-.project-link {
-    text-decoration: none;
+.project-card {
     display: block;
-    transition: all 0.3s ease;
+    text-decoration: none;
     color: inherit;
+    padding: 0;
+    background-color: rgba(20, 20, 20, 0.4);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.project-link:hover .project-title {
+.project-card:hover {
+    border-color: rgba(255, 107, 53, 0.3);
+    background-color: rgba(30, 30, 30, 0.4);
+}
+
+.project-card:hover .project-card-title {
     color: #FF6B35;
 }
 
-.project-link:hover .project-banner {
-    opacity: 0.8;
-}
-
-.project-banner {
+.project-card-img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
-    margin-bottom: 20px;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: opacity 0.3s ease;
-    border: 1px solid rgba(255, 107, 53, 0.2);
 }
 
-.project-title {
-    font-size: 1.5rem;
+.project-card:hover .project-card-img {
+    opacity: 0.85;
+}
+
+.project-card-body {
+    padding: 25px;
+}
+
+.project-card-title {
+    font-size: 1.3rem;
     font-weight: 600;
     color: #EDE7F4;
     margin-bottom: 8px;
     transition: color 0.3s ease;
 }
 
-.project-date {
+.project-card-date {
     font-size: 0.85rem;
     color: #999999;
     margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
 
-.project-summary {
-    font-size: 1rem;
+.project-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    color: #FF8C00;
+    background-color: #2a1810;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-card-summary {
+    font-size: 0.95rem;
     color: #cccccc;
     line-height: 1.6;
     margin-bottom: 0;
 }
 
-.projects + .separator {
-    margin-top: 60px;
+.projects-section + .separator {
+    margin-top: 40px;
     margin-bottom: 0;
 }
 
@@ -615,7 +645,7 @@ p {
     
     .page-title { font-size: 2rem; }
     
-    .project-banner { border-radius: 2px; }
+    .project-card-body { padding: 20px; }
     .reading-stats { flex-direction: column; }
     .stat-number { font-size: 2rem; }
     .book-card { padding: 20px; }
