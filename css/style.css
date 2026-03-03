@@ -79,7 +79,7 @@ header {
 
 /* Navigation */
 nav a {
-    color: #999999;
+    color: #FF6B35;
     text-decoration: none;
     margin-left: 20px;
     font-size: 0.9rem;
@@ -216,7 +216,7 @@ p {
 }
 
 .all-posts-link a {
-    color: #999999;
+    color: #FF6B35;
     text-decoration: none;
     font-size: 0.9rem;
     padding: 4px 10px;
@@ -249,7 +249,7 @@ p {
 }
 
 .social-icons a {
-    color: #666666;
+    color: #FF6B35;
     display: flex;
     align-items: center;
     padding: 6px;
@@ -275,7 +275,7 @@ p {
 }
 
 .footer-nav a {
-    color: #999999;
+    color: #FF6B35;
     text-decoration: none;
     margin-right: 20px;
     font-size: 0.9rem;
@@ -539,8 +539,10 @@ p {
 }
 
 .book-card:hover {
-    border-color: rgba(255, 107, 53, 0.3);
-    background-color: rgba(30, 30, 30, 0.4);
+    border-color: rgba(255, 107, 53, 0.7);
+    background-color: rgba(42, 24, 16, 0.5);
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.15), 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .book-card.current-reading {
@@ -611,7 +613,9 @@ p {
 
 .compact-book:hover {
     border-left-color: #FF6B35;
-    background-color: rgba(30, 30, 30, 0.4);
+    background-color: rgba(42, 24, 16, 0.5);
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.15), 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .compact-title {
@@ -676,7 +680,7 @@ p {
 .post-back-link {
     display: inline-block;
     font-size: 0.85rem;
-    color: #999999;
+    color: #FF6B35;
     text-decoration: none;
     margin-bottom: 30px;
     padding: 4px 10px;
