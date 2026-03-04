@@ -22,6 +22,50 @@
 
     --glow-sm: 0 0 12px rgba(255, 107, 53, 0.15);
     --glow-lg: 0 0 25px rgba(255, 107, 53, 0.15), 0 6px 16px rgba(0, 0, 0, 0.3);
+
+    --logo-grad: linear-gradient(90deg, #8B7355, #A0826D, #FF6B35);
+    --separator-mid: rgba(255, 107, 53, 0.8);
+    --separator-edge: rgba(255, 107, 53, 0.1);
+    --intro-base: #c0c0c0;
+    --intro-peak: #FFFFFF;
+    --tag-bg: #2a1810;
+    --toc-muted: #555555;
+    --dot-color: #333333;
+}
+
+[data-theme="light"] {
+    --accent: #7C3AED;
+    --accent-light: #6D28D9;
+    --text-primary: #1a1a2e;
+    --text-secondary: #333344;
+    --text-muted: #666677;
+    --text-dim: #999aaa;
+    --bg: #f0f0f5;
+
+    --accent-70: rgba(124, 58, 237, 0.7);
+    --accent-60: rgba(124, 58, 237, 0.6);
+    --accent-40: rgba(124, 58, 237, 0.4);
+    --accent-20: rgba(124, 58, 237, 0.2);
+    --accent-15: rgba(124, 58, 237, 0.15);
+    --accent-10: rgba(124, 58, 237, 0.1);
+
+    --warm-bg: rgba(124, 58, 237, 0.06);
+    --warm-bg-hover: rgba(124, 58, 237, 0.12);
+    --card-bg: rgba(124, 58, 237, 0.04);
+    --border-subtle: rgba(0, 0, 0, 0.06);
+    --border-light: rgba(0, 0, 0, 0.1);
+
+    --glow-sm: 0 0 12px rgba(124, 58, 237, 0.2);
+    --glow-lg: 0 0 25px rgba(124, 58, 237, 0.15), 0 6px 16px rgba(0, 0, 0, 0.08);
+
+    --logo-grad: linear-gradient(90deg, #6D28D9, #8B5CF6, #7C3AED);
+    --separator-mid: rgba(124, 58, 237, 0.7);
+    --separator-edge: rgba(124, 58, 237, 0.1);
+    --intro-base: #888899;
+    --intro-peak: #1a1a2e;
+    --tag-bg: rgba(124, 58, 237, 0.1);
+    --toc-muted: #999aaa;
+    --dot-color: #ccccdd;
 }
 
 /* Reset and base */
@@ -39,6 +83,34 @@ body {
     padding: 40px 20px;
     position: relative;
     overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-10);
+    box-shadow: var(--glow-sm);
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
 }
 
 /* Dot grid canvas background */
@@ -67,7 +139,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
-    background: linear-gradient(90deg, #8B7355, #A0826D, var(--accent));
+    background: var(--logo-grad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -84,11 +156,11 @@ header {
     height: 1px;
     background: linear-gradient(
         90deg,
-        var(--accent-10) 0%,
-        var(--accent-10) 40%,
-        var(--accent-70) 50%,
-        var(--accent-10) 60%,
-        var(--accent-10) 100%
+        var(--separator-edge) 0%,
+        var(--separator-edge) 40%,
+        var(--separator-mid) 50%,
+        var(--separator-edge) 60%,
+        var(--separator-edge) 100%
     );
     background-size: 200% 100%;
     margin: 50px 0;
@@ -156,11 +228,11 @@ h2 {
     margin-top: 0;
     background: linear-gradient(
         90deg,
-        #c0c0c0 0%,
-        #c0c0c0 40%,
-        #FFFFFF 50%,
-        #c0c0c0 60%,
-        #c0c0c0 100%
+        var(--intro-base) 0%,
+        var(--intro-base) 40%,
+        var(--intro-peak) 50%,
+        var(--intro-base) 60%,
+        var(--intro-base) 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
@@ -264,13 +336,13 @@ p {
 
 .post-row-line {
     flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--accent-40), var(--accent-10));
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-70), var(--accent-40));
     min-width: 40px;
 }
 
 .post-row-date {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -441,7 +513,7 @@ p {
 .project-tag {
     font-size: 0.75rem;
     color: var(--accent-light);
-    background-color: #2a1810;
+    background-color: var(--tag-bg);
     padding: 4px 10px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -634,7 +706,7 @@ p {
 .book-category {
     font-size: 0.75rem;
     color: var(--accent-light);
-    background-color: #2a1810;
+    background-color: var(--tag-bg);
     padding: 4px 10px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -787,7 +859,7 @@ p {
 
 .post-toc a {
     font-size: 0.8rem;
-    color: #555555;
+    color: var(--toc-muted);
     text-decoration: none;
     padding: 6px 0 6px 14px;
     margin-left: 0;
@@ -842,7 +914,7 @@ p {
 
 .post-body em {
     font-style: italic;
-    color: #bbbbbb;
+    color: var(--text-secondary);
 }
 
 /* Inline code */
@@ -950,7 +1022,7 @@ p {
 
 .post-figure figcaption {
     font-size: 0.8rem;
-    color: #777777;
+    color: var(--text-muted);
     margin-top: 10px;
     text-align: center;
     font-style: italic;

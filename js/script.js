@@ -13,9 +13,14 @@ window.addEventListener('resize', resizeCanvas);
 // Dot grid settings
 const dotSpacing = 23;
 const dotRadius = 1;
-const dotColor = '#333333';
+let dotColor = getComputedStyle(document.documentElement).getPropertyValue('--dot-color').trim() || '#333333';
 const maxDistance = 123;
 const maxDisplacement = 30;
+
+// Allow theme toggle to update dot color
+window.updateDotColor = function () {
+    dotColor = getComputedStyle(document.documentElement).getPropertyValue('--dot-color').trim() || '#333333';
+};
 
 // Mouse position
 let mouse = {
