@@ -373,15 +373,7 @@ p {
 }
 
 .project-card-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 1px solid var(--accent-20);
-    transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-card-img {
-    opacity: 0.85;
+    display: none;
 }
 
 .project-card-body {
