@@ -667,7 +667,8 @@ p {
 }
 
 .reading-indicator.queue {
-    background-color: var(--text-dim);
+    background-color: var(--accent);
+    opacity: 0.4;
     animation: pulse-queue 3s ease-in-out infinite;
 }
 
