@@ -6,6 +6,9 @@
 6. Kalshi trading bot in Python
 7. Custom MCP server and rust client
 8. Custom Account Catalogging and Account deletion service
+9. Rust-based compiler
+10. C-based LLM
+
 
 GOAL - One writeup / project per week
 

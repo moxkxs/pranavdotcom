@@ -4,5 +4,6 @@
 4. Trying to limit data stealing
 5. Neat history
 6. Some cute quant stuff
+7. Importance of independent though
 
 GOAL - One writeup / project per week
