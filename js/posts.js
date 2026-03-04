@@ -23,6 +23,7 @@
         .then(function (res) { return res.json(); })
         .then(function (posts) {
             // Sort newest first
+            posts = posts.filter(function (p) { return p.visible != false; });
             posts.sort(function (a, b) {
                 return b.date.localeCompare(a.date);
             });
