@@ -16,10 +16,10 @@
     var p = '../'.repeat(depth);
 
     var pages = [
-        ['home',      'index.html'],
-        ['writing',   'writing.html'],
-        ['projects',  'projects.html'],
-        ['bookshelf', 'bookshelf.html']
+        ['home',      'index.html',     true],
+        ['writing',   'writing.html',   true],
+        ['projects',  'projects.html',  true],
+        ['bookshelf', 'bookshelf.html', true]
     ];
 
     var socials = [
@@ -40,7 +40,7 @@
     }
 
     function navHTML() {
-        return pages.map(function (pg) {
+        return pages.filter(function (pg) { return pg[2]; }).map(function (pg) {
             return '<a href="' + p + pg[1] + '">' + pg[0] + '</a>';
         }).join('');
     }
