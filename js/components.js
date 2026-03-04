@@ -18,7 +18,7 @@
     var pages = [
         ['home',      'index.html',     true],
         ['writing',   'writing.html',   true],
-        ['projects',  'projects.html',  true],
+        ['projects',  'projects.html',  false],
         ['bookshelf', 'bookshelf.html', true]
     ];
 
