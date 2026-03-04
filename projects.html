@@ -24,41 +24,7 @@
         <div class="separator"></div>
         
         <section class="projects-section">
-            <a href="projects/volatility-surface.html" class="project-card">
-                <div class="project-card-body">
-                    <h3 class="project-card-title">Volatility Surface Visualization</h3>
-                    <p class="project-card-date">January 2026</p>
-                    <p class="project-card-summary">Interactive 3D visualization of implied volatility surfaces across strikes and expirations. Built with Python, plotly, and real-time options data.</p>
-                    <ul class="project-card-details">
-                        <li>Real-time data ingestion from options chains across multiple expirations</li>
-                        <li>Interactive rotation, zoom, and cross-section slicing of the vol surface</li>
-                        <li>Configurable interpolation methods including SVI and SABR parameterizations</li>
-                    </ul>
-                    <div class="project-card-meta">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Plotly</span>
-                        <span class="project-tag">Options</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="projects/backtest-framework.html" class="project-card">
-                <div class="project-card-body">
-                    <h3 class="project-card-title">Systematic Backtesting Framework</h3>
-                    <p class="project-card-date">December 2025</p>
-                    <p class="project-card-summary">Event-driven backtesting system with realistic transaction costs, slippage modeling, and position sizing. Handles both equities and derivatives.</p>
-                    <ul class="project-card-details">
-                        <li>Event-driven architecture with fill simulation and latency modeling</li>
-                        <li>Pluggable strategy interface with support for multi-asset portfolios</li>
-                        <li>Built-in performance analytics including Sharpe, drawdown, and turnover metrics</li>
-                    </ul>
-                    <div class="project-card-meta">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Backtesting</span>
-                        <span class="project-tag">Trading</span>
-                    </div>
-                </div>
-            </a>
+            <div id="projects-list"></div>
         </section>
         
         <div id="site-footer"></div>
@@ -66,5 +32,6 @@
     
     <script src="js/components.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html>

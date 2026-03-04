@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volatility Surface Visualization - Pranav Kandlakunta</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="../js/theme-init.js"></script>
+</head>
+<body>
+    <canvas id="dotGrid"></canvas>
+
+    <header id="site-header" data-depth="1"></header>
+
+    <main>
+        <article class="post">
+            <a href="../projects.html" class="post-back-link">&larr; back to projects</a>
+
+            <h2 class="post-page-title">Volatility Surface Visualization</h2>
+            <p class="post-page-date">January 2026</p>
+
+            <div class="post-layout">
+                <nav class="post-toc">
+                    <a href="#overview">Overview</a>
+                    <a href="#architecture">Architecture</a>
+                    <a href="#interpolation">Interpolation Methods</a>
+                    <a href="#lessons">Lessons Learned</a>
+                </nav>
+
+                <div class="post-body">
+                    <p>An interactive 3D visualization of implied volatility surfaces across strikes and expirations, built with Python and Plotly.</p>
+
+                    <h3 id="overview">Overview</h3>
+
+                    <p>The goal was to build a tool that lets you see the full volatility surface in real time — not just a static snapshot, but something you can rotate, slice, and query. Most brokers give you a flat table of IVs. That's like reading sheet music instead of hearing the symphony.</p>
+
+                    <p>The tool pulls live options chains, computes implied volatilities across the full grid of strikes and expirations, and renders the result as an interactive 3D surface you can manipulate in the browser.</p>
+
+                    <h3 id="architecture">Architecture</h3>
+
+                    <p>The pipeline has three stages:</p>
+
+                    <ol>
+                        <li><strong>Data ingestion</strong> — Pull options chains from the broker API, filter for liquid strikes, compute mid prices from bid-ask spreads.</li>
+                        <li><strong>IV computation</strong> — Use a Newton-Raphson solver to back out implied volatility from Black-Scholes for each option. Handle edge cases like deep ITM/OTM where the solver can diverge.</li>
+                        <li><strong>Surface rendering</strong> — Interpolate the sparse grid onto a smooth mesh using the chosen parameterization, then render with Plotly's 3D surface plot.</li>
+                    </ol>
+
+                    <pre><code>def compute_iv_surface(chain, spot, rate):
+    """Compute IV for each option in the chain."""
+    results = []
+    for opt in chain:
+        try:
+            iv = newton_iv(
+                price=opt.mid,
+                spot=spot,
+                strike=opt.strike,
+                tte=opt.tte,
+                rate=rate,
+                is_call=opt.is_call
+            )
+            results.append((opt.strike, opt.tte, iv))
+        except ConvergenceError:
+            continue
+    return results</code></pre>
+
+                    <h3 id="interpolation">Interpolation Methods</h3>
+
+                    <p>Raw IV grids are noisy and sparse. You need a parameterization to get a smooth, arbitrage-free surface. The tool supports two:</p>
+
+                    <ul>
+                        <li><strong>SVI (Stochastic Volatility Inspired)</strong> — Jim Gatheral's five-parameter model. Fits the smile well for a single expiration. Fast to calibrate.</li>
+                        <li><strong>SABR</strong> — Handles the dynamics better, particularly how the smile moves with the underlying. More parameters, slower calibration, but captures term structure effects that SVI misses.</li>
+                    </ul>
+
+                    <h3 id="lessons">Lessons Learned</h3>
+
+                    <p>The hard part wasn't the math or the rendering — it was the data cleaning. Options markets are messy. Stale quotes, wide spreads, illiquid strikes, and corporate actions all introduce noise that can make a surface look like a crumpled piece of paper instead of a smooth manifold.</p>
+
+                    <p>The biggest insight was that filtering aggressively on bid-ask spread width before computing IVs produces dramatically better surfaces than trying to smooth out bad data after the fact. Garbage in, garbage out — but applied to derivatives pricing.</p>
+                </div>
+            </div>
+        </article>
+
+        <div id="site-footer" data-depth="1"></div>
+    </main>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/toc.js"></script>
+</body>
+</html>

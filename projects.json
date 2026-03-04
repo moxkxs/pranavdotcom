@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Volatility Surface Visualization",
+        "slug": "volatility-surface",
+        "date": "2026-01",
+        "summary": "Interactive 3D visualization of implied volatility surfaces across strikes and expirations. Built with Python, plotly, and real-time options data.",
+        "details": [
+            "Real-time data ingestion from options chains across multiple expirations",
+            "Interactive rotation, zoom, and cross-section slicing of the vol surface",
+            "Configurable interpolation methods including SVI and SABR parameterizations"
+        ],
+        "tags": ["Python", "Plotly", "Options"],
+        "visible": true
+    },
+    {
+        "title": "Systematic Backtesting Framework",
+        "slug": "backtest-framework",
+        "date": "2025-12",
+        "summary": "Event-driven backtesting system with realistic transaction costs, slippage modeling, and position sizing. Handles both equities and derivatives.",
+        "details": [
+            "Event-driven architecture with fill simulation and latency modeling",
+            "Pluggable strategy interface with support for multi-asset portfolios",
+            "Built-in performance analytics including Sharpe, drawdown, and turnover metrics"
+        ],
+        "tags": ["Python", "Backtesting", "Trading"],
+        "visible": true
+    }
+]

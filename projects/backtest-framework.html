@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systematic Backtesting Framework - Pranav Kandlakunta</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="../js/theme-init.js"></script>
+</head>
+<body>
+    <canvas id="dotGrid"></canvas>
+
+    <header id="site-header" data-depth="1"></header>
+
+    <main>
+        <article class="post">
+            <a href="../projects.html" class="post-back-link">&larr; back to projects</a>
+
+            <h2 class="post-page-title">Systematic Backtesting Framework</h2>
+            <p class="post-page-date">December 2025</p>
+
+            <div class="post-layout">
+                <nav class="post-toc">
+                    <a href="#motivation">Motivation</a>
+                    <a href="#design">Design Decisions</a>
+                    <a href="#execution">Execution Model</a>
+                    <a href="#analytics">Analytics</a>
+                </nav>
+
+                <div class="post-body">
+                    <p>An event-driven backtesting system designed for realistic simulation of systematic trading strategies across equities and derivatives.</p>
+
+                    <h3 id="motivation">Motivation</h3>
+
+                    <p>Most backtesting frameworks lie to you. They assume instant fills at mid price, ignore market impact, and treat slippage as an afterthought. The result is a backtest that looks great on paper and bleeds money in production.</p>
+
+                    <p>This project started from the premise that a backtest is only useful if it models the things that actually kill strategies: transaction costs, latency, partial fills, and the gap between the price you see and the price you get.</p>
+
+                    <h3 id="design">Design Decisions</h3>
+
+                    <p>The framework is event-driven rather than vectorized. This is intentionally slower but dramatically more realistic:</p>
+
+                    <ul>
+                        <li><strong>Event queue</strong> — Market data, signals, orders, and fills are all events processed in timestamp order. No look-ahead bias possible.</li>
+                        <li><strong>Pluggable strategies</strong> — Each strategy implements a simple interface: receive market data, emit orders. The framework handles everything else.</li>
+                        <li><strong>Broker simulation</strong> — Models latency, partial fills, queue position, and realistic spread dynamics.</li>
+                    </ul>
+
+                    <pre><code>class Strategy:
+    def on_market_data(self, event):
+        """React to new market data. Return orders or None."""
+        raise NotImplementedError
+
+    def on_fill(self, event):
+        """React to order fill. Update internal state."""
+        raise NotImplementedError
+
+    def on_end_of_day(self, event):
+        """End-of-day housekeeping. Flatten positions, etc."""
+        pass</code></pre>
+
+                    <h3 id="execution">Execution Model</h3>
+
+                    <p>The fill simulator is where most of the complexity lives. For limit orders, it models queue position based on order arrival time and estimates probability of fill using historical volume profiles. For market orders, it applies a slippage model calibrated to the specific instrument's microstructure.</p>
+
+                    <p>The key insight is that slippage is not a constant — it's a function of order size relative to available liquidity, time of day, and recent volatility. A flat 1bp slippage assumption is fiction.</p>
+
+                    <h3 id="analytics">Analytics</h3>
+
+                    <p>The built-in analytics module computes the standard metrics — Sharpe, Sortino, max drawdown, Calmar — but also tracks turnover, fill rates, and the gap between theoretical and simulated P&L. That last metric is the most important one: it tells you how much your idealized model diverges from what would actually happen.</p>
+                </div>
+            </div>
+        </article>
+
+        <div id="site-footer" data-depth="1"></div>
+    </main>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/toc.js"></script>
+</body>
+</html>
