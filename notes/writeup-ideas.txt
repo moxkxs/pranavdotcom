@@ -4,6 +4,7 @@
 4. Trying to limit data stealing
 5. Neat history
 6. Some cute quant stuff
-7. Importance of independent though
+7. Importance of independent thought
+8. Goodbye, for now, UVA
 
 GOAL - One writeup / project per week
