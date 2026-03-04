@@ -264,13 +264,13 @@ p {
 
 .post-row-line {
     flex: 1;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-70), var(--accent-40));
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-40), var(--accent-10));
     min-width: 40px;
 }
 
 .post-row-date {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     letter-spacing: 0.5px;
     white-space: nowrap;
