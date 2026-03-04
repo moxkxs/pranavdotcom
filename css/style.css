@@ -668,6 +668,12 @@ p {
 
 .reading-indicator.queue {
     background-color: var(--text-dim);
+    animation: pulse-queue 3s ease-in-out infinite;
+}
+
+@keyframes pulse-queue {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
 }
 
 @keyframes pulse-indicator {
