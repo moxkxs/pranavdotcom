@@ -296,12 +296,12 @@ p {
 /* Footer navigation */
 .footer-nav {
     margin-top: 0;
-    padding-top: 15px;
+    padding-top: 0;
     text-align: center;
 }
 
 #site-footer .separator {
-    margin: 30px 0 0;
+    margin: 40px 0 20px;
 }
 
 .footer-nav a {
