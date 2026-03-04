@@ -241,6 +241,41 @@ p {
     margin-top: 30px;
 }
 
+/* Home page post rows (title — line — date) */
+.post-link-row {
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 12px 0;
+    transition: opacity 0.3s ease;
+}
+
+.post-link-row:hover {
+    opacity: 0.8;
+}
+
+.post-row-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.post-row-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-40), var(--accent-10));
+    min-width: 40px;
+}
+
+.post-row-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
 .all-posts-link a {
     color: var(--accent);
     text-decoration: none;
