@@ -17,7 +17,6 @@
 
     var pages = [
         ['home',      'index.html'],
-        ['about',     'about.html'],
         ['writing',   'writing.html'],
         ['projects',  'projects.html'],
         ['bookshelf', 'bookshelf.html']
