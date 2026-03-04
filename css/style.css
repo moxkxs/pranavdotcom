@@ -135,6 +135,12 @@ header {
     z-index: 2;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 /* Gradient logo */
 .logo {
     font-size: 1.5rem;
