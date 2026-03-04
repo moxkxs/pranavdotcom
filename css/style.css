@@ -40,7 +40,7 @@
     --text-secondary: #333344;
     --text-muted: #666677;
     --text-dim: #999aaa;
-    --bg: #f0f0f5;
+    --bg: #eaeaf0;
 
     --accent-70: rgba(124, 58, 237, 0.7);
     --accent-60: rgba(124, 58, 237, 0.6);
@@ -65,7 +65,7 @@
     --intro-peak: #1a1a2e;
     --tag-bg: rgba(124, 58, 237, 0.1);
     --toc-muted: #999aaa;
-    --dot-color: #ccccdd;
+    --dot-color: #b8b8cc;
 }
 
 /* Reset and base */
@@ -222,7 +222,7 @@ main {
 }
 
 h2 {
-    font-size: 4.2rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0;
 }
@@ -325,12 +325,15 @@ p {
     display: flex;
     align-items: baseline;
     gap: 16px;
-    padding: 12px 0;
-    transition: opacity 0.3s ease;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 0 -16px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-link-row:hover {
-    opacity: 0.8;
+    background: var(--accent-10);
+    box-shadow: var(--glow-sm);
 }
 
 .post-row-title {
