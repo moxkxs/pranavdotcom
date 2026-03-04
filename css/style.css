@@ -270,7 +270,7 @@ p {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-bottom: 40px;
 }
 
@@ -296,8 +296,12 @@ p {
 /* Footer navigation */
 .footer-nav {
     margin-top: 0;
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: center;
+}
+
+#site-footer .separator {
+    margin-bottom: 0;
 }
 
 .footer-nav a {
