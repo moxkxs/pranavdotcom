@@ -348,7 +348,7 @@ p {
 .post-row-line {
     flex: 1;
     height: 0;
-    border-top: 2px solid;
+    border-top: 3px solid;
     border-image: linear-gradient(90deg, var(--accent-70), var(--accent-40)) 1;
 }
 
