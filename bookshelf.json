@@ -56,10 +56,45 @@
         "visible": true
     },
     {
+        "title": "Caliban's War",
+        "author": "James S.A. Corey",
+        "category": "Sci-Fi",
+        "status": "completed",
+        "visible": true
+    }
+    {
+        "title": "Fear and Loathing in Las Vegas",
+        "author": "Hunter S. Thompson",
+        "category": "American Literature",
+        "status": "completed",
+        "visible": true
+    }
+    {
         "title": "Leviathan Wakes",
         "author": "James S.A. Corey",
         "category": "Sci-Fi",
         "note": "The first book in the Expanse series. Space opera meets noir detective fiction.",
+        "status": "completed",
+        "visible": true
+    }
+    {
+        "title": "Artificial Condition",
+        "author": "Martha Wells",
+        "category": "Sci-FI",
+        "status": "completed",
+        "visible": true
+    }
+    {
+        "title": "All Systems Red",
+        "author": "Martha Wells",
+        "category": "Sci-FI",
+        "status": "completed",
+        "visible": true
+    }
+    {
+        "title": "The Count of Monte Cristo",
+        "author": "Alexandre Dumas",
+        "category": "Novel",
         "status": "completed",
         "visible": true
     }
