@@ -39,117 +39,31 @@
             </div>
         </div>
         
-        <!-- Currently Reading Section -->
+        <!-- Currently Reading -->
         <section class="books-section">
             <h3 class="section-heading">
                 <span class="reading-indicator active"></span>
                 Currently Reading
             </h3>
-            
-            <div class="book-card current-reading">
-                <div class="book-info">
-                    <h4 class="book-title">Caliban's War</h4>
-                    <p class="book-author">James S.A. Corey</p>
-                    <div class="book-meta">
-                        <span class="book-category">Sci-Fi</span>
-                    </div>
-                    <p class="book-note">The second entry in Sci-Fi writing duo James S.A. Corey's series, the Expanse.</p>
-                </div>
-            </div>
-            <div class="book-card current-reading">
-                <div class="book-info">
-                    <h4 class="book-title">The Sun Also Rises</h4>
-                    <p class="book-author">Ernest Hemingway</p>
-                    <div class="book-meta">
-                        <span class="book-category">American Literature</span>
-                    </div>
-                    <p class="book-note">Hemingway's debut novel and the origin of the (in)famous Iceberg Theory. A glimpse into post World War I Europe through the eyes of expat journalist Jake Barnes.</p>
-                </div>
-            </div>
-            <div class="book-card current-reading">
-                <div class="book-info">
-                    <h4 class="book-title">Central Banking 101</h4>
-                    <p class="book-author">Joeseph Wang</p>
-                    <div class="book-meta">
-                        <span class="book-category">Markets</span>
-                    </div>
-                    <p class="book-note">Former FRBNY Open Markets Desk Trader Joeseph Wang offers a mental model to understand the dollar and its role in modern markets.</p>
-                </div>
-            </div>
-        </section>
-        <!-- 
-        
-        <section class="books-section">
-            <h3 class="section-heading">Markets & Trading</h3>
-            
-            <div class="book-card">
-                <div class="book-info">
-                    <h4 class="book-title">Reminiscences of a Stock Operator</h4>
-                    <p class="book-author">Edwin Lefèvre</p>
-                    <div class="book-meta">
-                        <span class="book-category">Trading</span>
-                        <span class="book-rating">★★★★★</span>
-                    </div>
-                    <p class="book-note">Fictionalized biography of Jesse Livermore. The psychology of trading hasn't changed in 100 years.</p>
-                </div>
-            </div>
+            <div id="books-reading"></div>
         </section>
         
-        
-        <section class="books-section">
-            <h3 class="section-heading">Probability & Statistics</h3>
-            
-            <div class="book-card">
-                <div class="book-info">
-                    <h4 class="book-title">Probability Theory: The Logic of Science</h4>
-                    <p class="book-author">E.T. Jaynes</p>
-                    <div class="book-meta">
-                        <span class="book-category">Probability</span>
-                        <span class="book-rating">★★★★★</span>
-                    </div>
-                    <p class="book-note">Probability as extended logic. Changed how I think about uncertainty and inference.</p>
-                </div>
-            </div>
-        </section>
-        
-        
-        <section class="books-section">
-            <h3 class="section-heading">Classics & Philosophy</h3>
-            
-            <div class="book-card">
-                <div class="book-info">
-                    <h4 class="book-title">Gödel, Escher, Bach</h4>
-                    <p class="book-author">Douglas Hofstadter</p>
-                    <div class="book-meta">
-                        <span class="book-category">Philosophy</span>
-                        <span class="book-rating">★★★★★</span>
-                    </div>
-                    <p class="book-note">Strange loops, self-reference, and consciousness. Dense but worth the effort.</p>
-                </div>
-            </div>
-        </section>
-        -->
         <!-- Up Next -->
         <section class="books-section">
             <h3 class="section-heading">
                 <span class="reading-indicator queue"></span>
                 Up Next
             </h3>
-            
-            <div class="book-list-compact">
-                <div class="compact-book">
-                    <span class="compact-title">Blood Meridian</span>
-                    <span class="compact-author">— Cormac McCarthy</span>
-                </div>
-                <div class="compact-book">
-                    <span class="compact-title">A Game of Thrones</span>
-                    <span class="compact-author">— George R. R. Martin</span>
-                </div>
-                <div class="compact-book">
-                    <span class="compact-title">Tender is the Flesh</span>
-                    <span class="compact-author">— Agustina Bazterrica</span>
-                </div>
-            </div>
+            <div id="books-queue" class="book-list-compact"></div>
+        </section>
+        
+        <!-- Completed -->
+        <section class="books-section">
+            <h3 class="section-heading">
+                <span class="reading-indicator completed"></span>
+                Completed
+            </h3>
+            <div id="books-completed" class="book-list-compact"></div>
         </section>
         
         <div id="site-footer"></div>
@@ -157,5 +71,6 @@
     
     <script src="js/components.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/bookshelf.js"></script>
 </body>
 </html>

@@ -672,6 +672,10 @@ p {
     animation: pulse-queue 3s ease-in-out infinite;
 }
 
+.reading-indicator.completed {
+    background-color: var(--text-dim);
+}
+
 @keyframes pulse-queue {
     0%, 100% { opacity: 0.4; }
     50% { opacity: 1; }
