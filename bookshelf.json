@@ -1,9 +1,9 @@
 [
     {
-        "title": "Caliban's War",
-        "author": "James S.A. Corey",
-        "category": "Sci-Fi",
-        "note": "The second entry in Sci-Fi writing duo James S.A. Corey's series, the Expanse.",
+        "title": "A Game of Thrones",
+        "author": "George R.R. Martin",
+        "category": "High Fantasy",
+        "note": "The first entry in GRRM's A Song of Ice and Fire series.",
         "status": "reading",
         "visible": true
     },
@@ -26,18 +26,32 @@
     {
         "title": "Blood Meridian",
         "author": "Cormac McCarthy",
+        "category": "Westerns",
+        "note": "Widely considered to be McCarthy's magnum opus. I wouldn't know as this is the first of his novels that I've picked up.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "In Cold Blood",
+        "author": "Truman Capote",
         "status": "queue",
         "visible": true
     },
     {
-        "title": "A Game of Thrones",
-        "author": "George R. R. Martin",
+        "title": "Abaddon's Gate",
+        "author": "James S.A. Corey",
         "status": "queue",
         "visible": true
     },
     {
-        "title": "Tender is the Flesh",
-        "author": "Agustina Bazterrica",
+        "title": "Dark Matter",
+        "author": "Blake Crouch",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "The Hunt for Red October",
+        "author": "Tom Clancy",
         "status": "queue",
         "visible": true
     },
