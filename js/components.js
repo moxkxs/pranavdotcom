@@ -67,7 +67,7 @@
     }
 
     if (header) {
-        header.innerHTML = '<h1 class="logo">pranavdotcom</h1><div class="header-right"><nav>' + navHTML() + '</nav><button class="theme-toggle" aria-label="Toggle theme">' + (isLight() ? sunSVG : moonSVG) + '</button></div>';
+        header.innerHTML = '<a href="' + p + 'index.html" class="logo">pranavdotcom</a>'<div class="header-right"><nav>' + navHTML() + '</nav><button class="theme-toggle" aria-label="Toggle theme">' + (isLight() ? sunSVG : moonSVG) + '</button></div>';
 
         var btn = header.querySelector('.theme-toggle');
         btn.addEventListener('click', function () {
