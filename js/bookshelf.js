@@ -26,6 +26,12 @@
             var queue = books.filter(function (b) { return b.status === 'queue'; });
             var completed = books.filter(function (b) { return b.status === 'completed'; });
 
+            // Update stat counters
+            var statReading = document.getElementById('stat-reading');
+            var statCompleted = document.getElementById('stat-completed');
+            if (statReading) statReading.textContent = reading.length;
+            if (statCompleted) statCompleted.textContent = completed.length;
+
             // Currently Reading — full cards
             if (readingContainer) {
                 readingContainer.innerHTML = reading.map(function (book) {
