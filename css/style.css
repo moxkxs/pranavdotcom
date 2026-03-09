@@ -50,7 +50,7 @@
     --accent-10: rgba(124, 58, 237, 0.1);
 
     --warm-bg: rgba(124, 58, 237, 0.06);
-    --warm-bg-hover: rgba(124, 58, 237, 0.12);
+    --warm-bg-hover: rgba(124, 58, 237, 0.18);
     --card-bg: rgba(124, 58, 237, 0.04);
     --border-subtle: rgba(0, 0, 0, 0.06);
     --border-light: rgba(0, 0, 0, 0.1);
@@ -491,7 +491,7 @@ p {
 
 .project-card:hover {
     border-color: var(--accent-70);
-    background-color: var(--warm-bg);
+    background-color: var(--warm-bg-hover);
     box-shadow: var(--glow-lg);
     transform: translateY(-2px);
 }
@@ -592,7 +592,7 @@ p {
 
 .disclaimer:hover {
     border-color: var(--accent-70);
-    background-color: var(--warm-bg);
+    background-color: var(--warm-bg-hover);
     box-shadow: var(--glow-lg);
     transform: translateY(-2px);
 }
@@ -715,7 +715,7 @@ p {
 
 .book-card:hover {
     border-color: var(--accent-70);
-    background-color: var(--warm-bg);
+    background-color: var(--warm-bg-hover);
     box-shadow: var(--glow-lg);
     transform: translateY(-2px);
 }
@@ -788,7 +788,7 @@ p {
 
 .compact-book:hover {
     border-left-color: var(--accent);
-    background-color: var(--warm-bg);
+    background-color: var(--warm-bg-hover);
     box-shadow: var(--glow-lg);
     transform: translateY(-2px);
 }
