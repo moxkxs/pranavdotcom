@@ -97,5 +97,26 @@
         "category": "Novel",
         "status": "completed",
         "visible": true
-    }
+    },
+    {
+        "title": "A Man for All Markets",
+        "author": "Edward O. Throp",
+        "category": ["Autobiography", "Markets", "Non-Fiction"], 
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Monetary Policy Responses to the Post-Pandemic Inflation",
+        "author": "Various Authors",
+        "category": ["Markets", "Non-Fiction"],
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Black-Box Thinking",
+        "author": "Matthew Syed",
+        "category": ["Psychology", "Non-Fiction"],
+        "status": "completed",
+        "visible": true
+    },
 ]

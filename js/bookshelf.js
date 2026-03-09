@@ -29,8 +29,11 @@
             // Currently Reading — full cards
             if (readingContainer) {
                 readingContainer.innerHTML = reading.map(function (book) {
-                    var catHTML = book.category
-                        ? '<div class="book-meta"><span class="book-category">' + book.category + '</span></div>'
+                    var cats = Array.isArray(book.category) ? book.category : (book.category ? [book.category] : []);
+                    var catHTML = cats.length
+                        ? '<div class="book-meta">' + cats.map(function (c) {
+                            return '<span class="book-category">' + c + '</span>';
+                        }).join('') + '</div>'
                         : '';
                     var noteHTML = book.note
                         ? '<p class="book-note">' + book.note + '</p>'
