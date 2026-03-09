@@ -24,17 +24,19 @@
         "visible": true
     },
     {
+        "title": "In Cold Blood",
+        "author": "Truman Capote",
+        "category": ["True Crime", "Novel", "Non-Fiction"],
+        "note": "Along with Hunter S. Thompson and others, Truman Capote ushered in so-called New Journalism. An approach to journalism that does away with sterile, recall of events in favor of an approach that reels readers in with storytelling. I've only just begun the book, but I'm really enjoying Capote's prose.",
+        "status": "reading",
+        "visible": true
+    },
+    {
         "title": "Blood Meridian",
         "author": "Cormac McCarthy",
         "category": "Westerns",
         "note": "Widely considered to be McCarthy's magnum opus. I wouldn't know as this is the first of his novels that I've picked up.",
         "status": "reading",
-        "visible": true
-    },
-    {
-        "title": "In Cold Blood",
-        "author": "Truman Capote",
-        "status": "queue",
         "visible": true
     },
     {
