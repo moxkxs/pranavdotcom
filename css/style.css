@@ -422,6 +422,10 @@ p {
     text-align: center;
 }
 
+#site-footer {
+    padding-top: 1px;
+}
+
 #site-footer .separator {
     margin: 40px 0 20px;
 }
