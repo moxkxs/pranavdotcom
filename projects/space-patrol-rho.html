@@ -16,7 +16,7 @@
 
     <main>
         <article class="post">
-            <a href="../writing.html" class="post-back-link">&larr; back to writing</a>
+            <a href="../projects.html" class="post-back-link">&larr; back to projects</a>
 
             <h2 class="post-page-title">Space Patrol ρ</h2>
             <p class="post-page-date">March 2026</p>
@@ -196,7 +196,7 @@
 
           gs==="playing"&&[
             e("div",{key:"hud-hp",style:{position:"absolute",top:10,left:14,display:"flex",gap:8,zIndex:10}},
-              hearts.map(i=>e("span",{key:i,style:{color:i<hp?"#ff3333":"#332222",fontSize:14,fontFamily:mono,textShadow:i<hp?"0 0 8px rgba(255,51,51,0.7)":"none"}},i<hp?"<3":"</3"))),
+              hearts.map(i=>e("span",{key:i,style:{color:i<hp?"#ff3333":"#332222",fontSize:14,fontFamily:mono,textShadow:i<hp?"0 0 8px rgba(255,51,51,0.7)":"none"}},i<hp?"<3":"<"+"/3"))),
             e("div",{key:"hud-sc",style:{position:"absolute",top:10,left:"50%",transform:"translateX(-50%)",color:"#FF6B35",fontSize:13,letterSpacing:3,zIndex:10,textShadow:"0 0 6px rgba(255,107,53,0.3)"}},"SCORE "+String(sc).padStart(6,"0")),
             e("div",{key:"hud-lv",style:{position:"absolute",top:10,right:14,color:"#FF6B35",fontSize:13,letterSpacing:2,zIndex:10,textShadow:"0 0 6px rgba(255,107,53,0.3)"}},"LVL "+lv),
 
