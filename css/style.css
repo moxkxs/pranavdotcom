@@ -462,6 +462,11 @@ p {
 
 .space-patrol {
     margin: 10px 0 0;
+    visibility: hidden;
+}
+
+.space-patrol.sp-ready {
+    visibility: visible;
 }
 
 .space-patrol .disclaimer {

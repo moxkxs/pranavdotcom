@@ -11,11 +11,6 @@
     var containers = document.querySelectorAll('.space-patrol');
     if (!containers.length) return;
 
-    /* inject critical CSS immediately to prevent FOUT and fix margin */
-    var critStyle = document.createElement('style');
-    critStyle.textContent = '.space-patrol{visibility:hidden}.space-patrol.sp-ready{visibility:visible}';
-    document.head.appendChild(critStyle);
-
     function loadScript(src, cb) {
         var s = document.createElement('script');
         s.src = src;
