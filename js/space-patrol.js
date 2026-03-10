@@ -13,7 +13,7 @@
 
     /* inject critical CSS immediately to prevent FOUT and fix margin */
     var critStyle = document.createElement('style');
-    critStyle.textContent = '.space-patrol{visibility:hidden}.space-patrol.sp-ready{visibility:visible}.space-patrol .disclaimer{margin-bottom:0!important}';
+    critStyle.textContent = '.space-patrol{visibility:hidden}.space-patrol.sp-ready{visibility:visible}';
     document.head.appendChild(critStyle);
 
     function loadScript(src, cb) {

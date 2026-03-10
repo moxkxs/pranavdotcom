@@ -460,9 +460,16 @@ p {
     margin-bottom: 40px;
 }
 
+.space-patrol {
+    margin: 10px 0 0;
+}
+
+.space-patrol .disclaimer {
+    margin-bottom: 0;
+}
+
 .space-patrol + .separator {
     margin-top: 20px;
-    margin-bottom: 40px;
 }
 
 /* ===================== */
