@@ -460,6 +460,11 @@ p {
     margin-bottom: 40px;
 }
 
+.space-patrol + .separator {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 /* ===================== */
 /* Projects */
 /* ===================== */
