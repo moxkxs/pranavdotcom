@@ -1,8 +1,0 @@
-Write ups
-1. Hello World! / Blog Intro + Motivations
-
-Projects
-1. Rust-based Neural Net implementation
-2. Rust-based Systematic Macro Dashboard
-3. Rust-based compiler
-4. C-based Neural Net Implementation
