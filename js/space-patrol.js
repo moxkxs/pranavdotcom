@@ -11,6 +11,11 @@
     var containers = document.querySelectorAll('.space-patrol');
     if (!containers.length) return;
 
+    /* inject critical CSS immediately to prevent FOUT and fix margin */
+    var critStyle = document.createElement('style');
+    critStyle.textContent = '.space-patrol{visibility:hidden}.space-patrol.sp-ready{visibility:visible}.space-patrol .disclaimer{margin-bottom:0!important}';
+    document.head.appendChild(critStyle);
+
     function loadScript(src, cb) {
         var s = document.createElement('script');
         s.src = src;
@@ -35,6 +40,7 @@
             var wrapper = document.createElement('div');
             el.appendChild(wrapper);
             ReactDOM.createRoot(wrapper).render(React.createElement(App, { text: customText }));
+            el.classList.add('sp-ready');
         });
     }
 
@@ -55,9 +61,9 @@
             exhaustGlow: "0 0 10px rgba(255,136,51,0.7)",
             laser: "#ffdd00",
             laserGlow: "0 0 8px rgba(255,221,0,0.9), 0 0 25px rgba(255,221,0,0.4)",
-            heartOn: "#ff3333",
-            heartOff: "#332222",
-            heartGlow: "0 0 8px rgba(255,51,51,0.7)",
+            heartOn: "#FF6B35",
+            heartOff: "#3a2a1a",
+            heartGlow: "0 0 8px rgba(255,107,53,0.6)",
             meteorBase: [170,119,85],
             meteorHit: [255,69,30],
             explColors: ["#ffcc33","#ffaa33","#ff8833","#aa6633","#664422"],
@@ -66,6 +72,9 @@
             titleGlow: "0 0 15px rgba(255,107,53,0.4), 0 0 40px rgba(255,107,53,0.15)",
             deathColor: "#ff3333",
             deathGlow: "0 0 12px rgba(255,51,51,0.5), 0 0 30px rgba(255,30,30,0.2)",
+            deathAccent: "#ff5544",
+            deathMid: "#aa4433",
+            deathDim: "#773322",
             hudShadow: "0 0 6px rgba(255,107,53,0.3)",
             subtextA: "rgba(180,180,210,0.4)",
             subtextB: "rgba(180,180,210,0.25)",
@@ -73,9 +82,10 @@
             btnBorder: "rgba(255,107,53,0.25)",
             idleBg: "radial-gradient(ellipse at center, rgba(10,10,26,0.3) 0%, rgba(2,2,8,0.8) 100%)",
             deathBg: "radial-gradient(ellipse at center, rgba(30,5,5,0.7) 0%, rgba(2,2,8,0.9) 100%)",
-            scoreMid: "#886644",
-            scoreDim: "#554433",
-            insetShadow: "inset 0 0 120px rgba(0,0,0,0.5)"
+            deathBtnColor: "rgba(255,85,68,0.6)",
+            deathBtnBorder: "rgba(255,85,68,0.25)",
+            insetShadow: "inset 0 0 120px rgba(0,0,0,0.5)",
+            shipExplColors: ["#FF6B35","#ffaa33","#ffcc33","#ff8833","#aa6633","#664422","#443322"]
         },
         light: {
             bg: "radial-gradient(ellipse at 30% 50%, #e0e0f0 0%, #d0d0e2 50%, #c5c5da 100%)",
@@ -89,9 +99,9 @@
             exhaustGlow: "0 0 10px rgba(124,58,237,0.5)",
             laser: "#a855f7",
             laserGlow: "0 0 8px rgba(168,85,247,0.8), 0 0 25px rgba(124,58,237,0.35)",
-            heartOn: "#e53e3e",
-            heartOff: "#ccbbbb",
-            heartGlow: "0 0 6px rgba(229,62,62,0.5)",
+            heartOn: "#7C3AED",
+            heartOff: "#c0b8d0",
+            heartGlow: "0 0 6px rgba(124,58,237,0.5)",
             meteorBase: [120,90,70],
             meteorHit: [200,50,20],
             explColors: ["#c084fc","#a855f7","#9333ea","#7e22ce","#6b21a8"],
@@ -100,6 +110,9 @@
             titleGlow: "0 0 12px rgba(124,58,237,0.3), 0 0 30px rgba(124,58,237,0.1)",
             deathColor: "#dc2626",
             deathGlow: "0 0 10px rgba(220,38,38,0.4), 0 0 25px rgba(220,38,38,0.15)",
+            deathAccent: "#e53e3e",
+            deathMid: "#c06060",
+            deathDim: "#a08080",
             hudShadow: "0 0 4px rgba(124,58,237,0.25)",
             subtextA: "rgba(60,50,90,0.45)",
             subtextB: "rgba(60,50,90,0.3)",
@@ -107,9 +120,10 @@
             btnBorder: "rgba(124,58,237,0.3)",
             idleBg: "radial-gradient(ellipse at center, rgba(224,224,240,0.4) 0%, rgba(197,197,218,0.85) 100%)",
             deathBg: "radial-gradient(ellipse at center, rgba(240,220,220,0.7) 0%, rgba(197,197,218,0.92) 100%)",
-            scoreMid: "#8b7ab8",
-            scoreDim: "#a099b8",
-            insetShadow: "inset 0 0 80px rgba(100,90,140,0.08)"
+            deathBtnColor: "rgba(220,38,38,0.5)",
+            deathBtnBorder: "rgba(220,38,38,0.25)",
+            insetShadow: "inset 0 0 80px rgba(100,90,140,0.08)",
+            shipExplColors: ["#7C3AED","#a855f7","#c084fc","#9b6dff","#8b7ab8","#a099b8","#c0b8d0"]
         }
     };
 
@@ -138,9 +152,9 @@
       {art:[" \u00B7\\|/\u00B7 ","\u00B7- \u2731\u2731 -\u00B7"," \u00B7/|\\\u00B7 "],ci:1,glow:true},
       {art:["  .\u2734. "," .\u2734\u2727\u2734. ","  .\u2734.  "],ci:2,glow:true},
       {art:[" \u00B7 * \u00B7 ","\u00B7 * * \u00B7"," \u00B7 * \u00B7 "],ci:3,glow:true},
-      {art:["  .*. "," .\u00B7*\u00B7. ","  .*.  "],ci:3,glow:false},
-      {art:["   \u00B7  ","  \u00B7 \u00B7 ","   \u00B7  "],ci:4,glow:false},
-      {art:["      ","   \u00B7  ","      "],ci:4,glow:false}
+      {art:["  .*. "," .\u00B7*\u00B7. ","  .*.  "],ci:4,glow:false},
+      {art:["   \u00B7  ","  \u00B7 \u00B7 ","   \u00B7  "],ci:5,glow:false},
+      {art:["      ","   \u00B7  ","      "],ci:6,glow:false}
     ];
 
     var STARS=[".","\u00B7","\u2219","\u22C5","\u00B0","\u2218","\u2726","\u2727","+","*","\u22B9","\u207A","\u02DA","\u2022"];
@@ -296,8 +310,8 @@
             !se&&ce("div",{key:"ship",style:{position:"absolute",left:SX,top:sy-30,color:T.ship,fontSize:13,lineHeight:"13px",whiteSpace:"pre",zIndex:5,textShadow:T.shipGlow}},SHIP.join("\n")),
 
             /* ship explosion */
-            se&&(function(){var fi=Math.min(Math.floor(sef),SEF.length-1),f=SEF[fi],col=T.explColors[f.ci]||T.explColors[T.explColors.length-1];
-              return ce("div",{key:"shipexp",style:{position:"absolute",left:SX+20,top:dsy-20,color:col,fontSize:15,lineHeight:"15px",whiteSpace:"pre",zIndex:6,textShadow:f.glow?T.explGlow:"none",opacity:1-sef/SEF.length*0.3,transform:"scale("+(1+sef*0.15)+")"}},f.art.join("\n"));})(),
+            se&&(function(){var fi=Math.min(Math.floor(sef),SEF.length-1),f=SEF[fi],col=T.shipExplColors[fi]||T.shipExplColors[T.shipExplColors.length-1];
+              return ce("div",{key:"shipexp",style:{position:"absolute",left:SX+20,top:dsy-20,color:col,fontSize:15,lineHeight:"15px",whiteSpace:"pre",zIndex:6,textShadow:f.glow?"0 0 15px "+col+", 0 0 30px "+col+"66":"none",opacity:1-sef/SEF.length*0.3,transform:"scale("+(1+sef*0.15)+")"}},f.art.join("\n"));})(),
 
             /* lasers */
             las.map(function(l){return ce("div",{key:l.id,style:{position:"absolute",left:l.x,top:l.y-4,color:T.laser,fontSize:12,fontWeight:"bold",whiteSpace:"pre",zIndex:4,letterSpacing:-1,textShadow:T.laserGlow}},"\u2500\u2500\u2500\u2500\u2500\u2500");}),
@@ -325,10 +339,10 @@
           gs==="gameover"&&ce("div",{style:{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",zIndex:20,background:T.deathBg}},
             ce("pre",{style:{color:T.deathColor,fontSize:10,lineHeight:"12px",letterSpacing:1,textShadow:T.deathGlow,marginBottom:20,textAlign:"center",fontFamily:mono}},
 "\n ____  ____  ____  ____  ____  _____  _  _  ____  ____\n(  _ \\( ___)/ ___)(_  _)(  _ \\(  _  )( \\/ )( ___)(  _ \\\n )(_) ))__)  \\___ \\  )(   )   / )(_)(  \\  /  )__)  )(_) )\n(____/(____)(____/ (__) (_)\\_)(_____) (__) (____)(____/"),
-            ce("div",{style:{color:T.accent,fontSize:14,letterSpacing:3,marginBottom:6,textShadow:T.hudShadow}},"SCORE "+String(sc).padStart(6,"0")),
-            ce("div",{style:{color:T.scoreMid,fontSize:12,letterSpacing:2,marginBottom:4}},"LVL "+lv),
-            ce("div",{style:{color:T.scoreDim,fontSize:11,letterSpacing:2,marginBottom:24}},"BEST "+String(Math.max(hi,sc)).padStart(6,"0")),
-            ce("div",{style:{color:T.btnColor,fontSize:13,cursor:"pointer",padding:"6px 20px",border:"1px solid "+T.btnBorder,borderRadius:3,letterSpacing:4}},"[ RELAUNCH ]"))
+            ce("div",{style:{color:T.deathAccent,fontSize:14,letterSpacing:3,marginBottom:6,textShadow:"0 0 8px "+T.deathAccent+"66"}},"SCORE "+String(sc).padStart(6,"0")),
+            ce("div",{style:{color:T.deathMid,fontSize:12,letterSpacing:2,marginBottom:4}},"LVL "+lv),
+            ce("div",{style:{color:T.deathDim,fontSize:11,letterSpacing:2,marginBottom:24}},"BEST "+String(Math.max(hi,sc)).padStart(6,"0")),
+            ce("div",{style:{color:T.deathBtnColor,fontSize:13,cursor:"pointer",padding:"6px 20px",border:"1px solid "+T.deathBtnBorder,borderRadius:3,letterSpacing:4}},"[ RELAUNCH ]"))
         )
       );
     }
@@ -339,7 +353,7 @@
       var _o=React.useState(false),open=_o[0],setOpen=_o[1];
 
       if(!open){
-        return ce("div",{className:"disclaimer",onClick:function(){setOpen(true);},style:{cursor:"pointer",marginBottom:0}},
+        return ce("div",{className:"disclaimer",onClick:function(){setOpen(true);},style:{cursor:"pointer"}},
           ce("svg",{className:"disclaimer-icon",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},
             ce("polygon",{points:"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"})),
           ce("p",null,label));
