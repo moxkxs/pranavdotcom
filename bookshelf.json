@@ -40,6 +40,24 @@
         "visible": true
     },
     {
+        "title": "Heart of Europe: A History of the Holy Roman Empire",
+        "author": "Peter H. Wilson",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "Sputnik Sweetheart",
+        "author": "Haruki Murakami",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "The City and Its Uncertain Walls",
+        "author": "Haruki Murakami",
+        "status": "queue",
+        "visible": true
+    },
+    {
         "title": "Abaddon's Gate",
         "author": "James S.A. Corey",
         "status": "queue",
@@ -118,6 +136,13 @@
         "title": "Black-Box Thinking",
         "author": "Matthew Syed",
         "category": ["Psychology", "Non-Fiction"],
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Kafka on the Shore",
+        "author": "Haruki Murakami",
+        "category": "Novel",
         "status": "completed",
         "visible": true
     }
