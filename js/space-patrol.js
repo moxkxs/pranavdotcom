@@ -13,7 +13,7 @@
 
     /* inject critical CSS immediately to prevent FOUT and fix margin */
     var critStyle = document.createElement('style');
-    critStyle.textContent = '.space-patrol{visibility:hidden;margin-bottom:0!important}.space-patrol.sp-ready{visibility:visible}.space-patrol .disclaimer{margin-bottom:0!important}';
+    critStyle.textContent = '.space-patrol{visibility:hidden;margin-bottom:0!important}.space-patrol.sp-ready{visibility:visible}.space-patrol .disclaimer{margin-bottom:0!important}.space-patrol+.separator{margin-top:15px!important}';
     document.head.appendChild(critStyle);
 
     function loadScript(src, cb) {
@@ -108,8 +108,8 @@
             explGlow: "0 0 12px rgba(168,85,247,0.7), 0 0 25px rgba(124,58,237,0.4)",
             titleColor: "#7C3AED",
             titleGlow: "0 0 12px rgba(124,58,237,0.3), 0 0 30px rgba(124,58,237,0.1)",
-            deathColor: "#b91c1c",
-            deathGlow: "0 0 10px rgba(185,28,28,0.4), 0 0 25px rgba(185,28,28,0.2)",
+            deathColor: "#6D28D9",
+            deathGlow: "0 0 10px rgba(109,40,217,0.4), 0 0 25px rgba(109,40,217,0.2)",
             deathAccent: "#7C3AED",
             deathMid: "#6D28D9",
             deathDim: "#8b7ab8",
@@ -119,7 +119,7 @@
             btnColor: "rgba(124,58,237,0.6)",
             btnBorder: "rgba(124,58,237,0.3)",
             idleBg: "radial-gradient(ellipse at center, rgba(224,224,240,0.4) 0%, rgba(197,197,218,0.85) 100%)",
-            deathBg: "radial-gradient(ellipse at center, rgba(234,234,240,0.95) 0%, rgba(210,210,225,0.97) 100%)",
+            deathBg: "radial-gradient(ellipse at center, #eaeaf0 0%, #dddde8 100%)",
             deathBtnColor: "rgba(124,58,237,0.6)",
             deathBtnBorder: "rgba(124,58,237,0.3)",
             insetShadow: "inset 0 0 80px rgba(100,90,140,0.08)",
