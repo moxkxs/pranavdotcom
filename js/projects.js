@@ -14,7 +14,7 @@
         prefix = '../'.repeat(parseInt(depth.dataset.depth, 10));
     }
 
-    fetch(prefix + 'projects.json')
+    fetch(prefix + 'data/projects.json')
         .then(function (res) { return res.json(); })
         .then(function (projects) {
             // Filter visible, sort newest first

@@ -17,7 +17,7 @@
         prefix = '../'.repeat(parseInt(depth.dataset.depth, 10));
     }
 
-    fetch(prefix + 'bookshelf.json')
+    fetch(prefix + 'data/bookshelf.json')
         .then(function (res) { return res.json(); })
         .then(function (books) {
             books = books.filter(function (b) { return b.visible !== false; });

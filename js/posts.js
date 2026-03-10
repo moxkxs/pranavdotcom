@@ -19,7 +19,7 @@
         prefix = '../'.repeat(parseInt(depth.dataset.depth, 10));
     }
 
-    fetch(prefix + 'posts.json')
+    fetch(prefix + 'data/posts.json')
         .then(function (res) { return res.json(); })
         .then(function (posts) {
             // Sort newest first
