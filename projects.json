@@ -10,7 +10,7 @@
             "Configurable interpolation methods including SVI and SABR parameterizations"
         ],
         "tags": ["Python", "Plotly", "Options"],
-        "visible": true
+        "visible": false
     },
     {
         "title": "Systematic Backtesting Framework",
@@ -23,6 +23,6 @@
             "Built-in performance analytics including Sharpe, drawdown, and turnover metrics"
         ],
         "tags": ["Python", "Backtesting", "Trading"],
-        "visible": true
+        "visible": false
     }
 ]
