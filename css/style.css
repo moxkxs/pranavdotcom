@@ -468,6 +468,11 @@ p {
     margin-bottom: 0;
 }
 
+.space-patrol + .separator {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 /* ===================== */
 /* Projects */
 /* ===================== */
