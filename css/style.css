@@ -422,12 +422,16 @@ p {
     text-align: center;
 }
 
+*:has(+ #site-footer) {
+    margin-bottom: 0;
+}
+
 #site-footer {
-    padding-top: 1px;
+    padding-top: 40px;
 }
 
 #site-footer .separator {
-    margin: 40px 0 20px;
+    margin: 0 0 20px;
 }
 
 .footer-nav a {
