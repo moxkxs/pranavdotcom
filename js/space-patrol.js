@@ -226,7 +226,7 @@
           /* idle screen */
           gs==="idle"&&ce("div",{style:{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",zIndex:20,background:"radial-gradient(ellipse at center, rgba(10,10,26,0.3) 0%, rgba(2,2,8,0.8) 100%)"}},
             ce("pre",{style:{color:"#FF6B35",fontSize:10,lineHeight:"12px",letterSpacing:1,textShadow:"0 0 15px rgba(255,107,53,0.4), 0 0 40px rgba(255,107,53,0.15)",marginBottom:24,textAlign:"center",fontFamily:mono}},
-"  ____  ____   __    ___  ____\n / ___)(  _ \\ / _\\  / __)(  __)\n \\___ \\ ) __//    \\( (__  ) _)\n (____/(__)  \\_/\\_/ \\___)(____)\n ____   __  ____  ____  _____  __\n(  _ \\ / _\\(_  _)(  _ \\(  _  )(  )\n ) __//    \\ )(   )   / )(_)(  )(__\n(__)  \\_/\\_/(__) (_)\\_)(_____)(____)\n            .-------.\n           / .-----. \\\n          / /       \\ \\\n          | |       | |\n           \\ '-----' /\n            '-------'\n           / /\n          / /\n         (_/"),
+"  ____  ____   __    ___  ____\n / ___)(  _ \\ / _\\  / __)(  __)\n \\___ \\ ) __//    \\( (__  ) _)\n (____/(__)  \\_/\\_/ \\___)(____)\n ____   __  ____  ____  _____  __\n(  _ \\ / _\\(_  _)(  _ \\(  _  )(  )\n ) __//    \\ )(   )   / )(_)(  )(__\n(__)  \\_/\\_/(__) (_)\\_)(_____)(____)"),
             ce("div",{style:{color:"rgba(180,180,210,0.4)",fontSize:12,marginBottom:6,letterSpacing:3}},"mouse to move \u00B7 hold to fire"),
             ce("div",{style:{color:"rgba(180,180,210,0.25)",fontSize:11,marginBottom:24,letterSpacing:2}},"destroy meteors \u00B7 survive the void"),
             ce("div",{style:{color:"rgba(255,107,53,0.6)",fontSize:13,cursor:"pointer",padding:"6px 20px",border:"1px solid rgba(255,107,53,0.25)",borderRadius:3,letterSpacing:4}},"[ LAUNCH ]")),
@@ -243,38 +243,21 @@
       );
     }
 
-    /* ── inject transition styles ── */
-    var styleEl = document.createElement('style');
-    styleEl.textContent = '.sp-wrap{overflow:hidden;transition:all 0.4s ease;}.sp-fade-in{animation:spFadeIn 0.3s ease 0.2s both;}@keyframes spFadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}';
-    document.head.appendChild(styleEl);
-
     /* ── App wrapper: disclaimer box → game ── */
     function App(props){
-      var label = props.text || "Space Patrol \u03C1 \u2014 click to play";
-      var _o=React.useState("closed"),state=_o[0],setState=_o[1];
-      var wrapRef=React.useRef(null);
+      var label = props.text || "Space Patrol \u2014 click to play";
+      var _o=React.useState(false),open=_o[0],setOpen=_o[1];
 
-      function handleOpen(){
-        setState("opening");
-        setTimeout(function(){setState("open");},50);
-      }
-      function handleClose(){
-        setState("closing");
-        setTimeout(function(){setState("closed");},400);
+      if(!open){
+        return ce("div",{className:"disclaimer",onClick:function(){setOpen(true);},style:{cursor:"pointer"}},
+          ce("svg",{className:"disclaimer-icon",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},
+            ce("polygon",{points:"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"})),
+          ce("p",null,label));
       }
 
-      if(state==="closed"||state==="closing"){
-        return ce("div",{className:"sp-wrap",style:{opacity:state==="closing"?0:1,transform:state==="closing"?"translateY(-5px)":"none",transition:"opacity 0.3s ease, transform 0.3s ease"}},
-          ce("div",{className:"disclaimer",onClick:handleOpen,style:{cursor:"pointer",margin:0}},
-            ce("svg",{className:"disclaimer-icon",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},
-              ce("polygon",{points:"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"})),
-            ce("p",null,label)));
-      }
-
-      return ce("div",{ref:wrapRef,className:"sp-wrap"},
-        ce("div",{className:state==="open"?"sp-fade-in":"",style:{opacity:state==="opening"?0:1}},
-          ce(Game),
-          ce("div",{onClick:handleClose,style:{color:"var(--text-muted)",fontSize:11,marginTop:8,cursor:"pointer",textAlign:"right",opacity:0.5}},"[ close ]")));
+      return ce("div",null,
+        ce(Game),
+        ce("div",{onClick:function(){setOpen(false);},style:{color:"var(--text-muted)",fontSize:11,marginTop:8,cursor:"pointer",textAlign:"right",opacity:0.5}},"[ close ]"));
     }
 
     boot();
