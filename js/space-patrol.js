@@ -29,9 +29,11 @@
 
     function init() {
         containers.forEach(function (el) {
+            var customText = el.textContent.trim();
+            el.textContent = '';
             var wrapper = document.createElement('div');
             el.appendChild(wrapper);
-            ReactDOM.createRoot(wrapper).render(React.createElement(App));
+            ReactDOM.createRoot(wrapper).render(React.createElement(App, { text: customText }));
         });
     }
 
@@ -242,13 +244,14 @@
     }
 
     /* ── App wrapper: disclaimer box → game ── */
-    function App(){
+    function App(props){
+      var label = props.text || "Space Patrol \u03C1 \u2014 click to play";
       var _o=React.useState(false),open=_o[0],setOpen=_o[1];
       if(!open){
         return ce("div",{className:"disclaimer",onClick:function(){setOpen(true);},style:{cursor:"pointer"}},
           ce("svg",{className:"disclaimer-icon",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},
             ce("polygon",{points:"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"})),
-          ce("p",null,"Space Patrol \u03C1 \u2014 click to play"));
+          ce("p",null,label));
       }
       return ce("div",null,
         ce(Game),
