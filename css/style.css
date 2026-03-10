@@ -469,7 +469,7 @@ p {
 }
 
 .space-patrol + .separator {
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 /* ===================== */
