@@ -24,5 +24,18 @@
         ],
         "tags": ["Python", "Backtesting", "Trading"],
         "visible": true
+    },
+    {
+        "title": "Space Patrol ρ",
+        "slug": "space-patrol-rho",
+        "date": "2026-03",
+        "summary": "An ASCII space shooter built entirely with text characters.",
+        "details": [
+            "Mouse to move, hold to fire",
+            "Procedurally scaling meteors with HP",
+            "Built with React, rendered as ASCII art"
+        ],
+        "tags": ["Game", "ASCII", "React"],
+        "visible": true
     }
 ]
