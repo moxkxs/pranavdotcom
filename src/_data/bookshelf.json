@@ -1,0 +1,149 @@
+[
+    {
+        "title": "A Game of Thrones",
+        "author": "George R.R. Martin",
+        "category": "High Fantasy",
+        "note": "The first entry in GRRM's A Song of Ice and Fire series.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "The Sun Also Rises",
+        "author": "Ernest Hemingway",
+        "category": "American Literature",
+        "note": "Hemingway's debut novel and the origin of the (in)famous Iceberg Theory. A glimpse into post World War I Europe through the eyes of expat journalist Jake Barnes.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "Central Banking 101",
+        "author": "Joeseph Wang",
+        "category": "Markets",
+        "note": "Former FRBNY Open Markets Desk Trader Joeseph Wang offers a mental model to understand the dollar and its role in modern markets.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "In Cold Blood",
+        "author": "Truman Capote",
+        "category": ["True Crime", "Novel", "Non-Fiction"],
+        "note": "Along with Hunter S. Thompson and others, Truman Capote ushered in so-called New Journalism. An approach to journalism that does away with sterile, recall of events in favor of an approach that reels readers in with storytelling. I've only just begun the book, but I'm really enjoying Capote's prose.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "Blood Meridian",
+        "author": "Cormac McCarthy",
+        "category": "Westerns",
+        "note": "Widely considered to be McCarthy's magnum opus. I wouldn't know as this is the first of his novels that I've picked up.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "Heart of Europe: A History of the Holy Roman Empire",
+        "author": "Peter H. Wilson",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "Sputnik Sweetheart",
+        "author": "Haruki Murakami",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "The City and Its Uncertain Walls",
+        "author": "Haruki Murakami",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "Abaddon's Gate",
+        "author": "James S.A. Corey",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "Dark Matter",
+        "author": "Blake Crouch",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "The Hunt for Red October",
+        "author": "Tom Clancy",
+        "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "Caliban's War",
+        "author": "James S.A. Corey",
+        "category": "Sci-Fi",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Fear and Loathing in Las Vegas",
+        "author": "Hunter S. Thompson",
+        "category": "American Literature",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Leviathan Wakes",
+        "author": "James S.A. Corey",
+        "category": "Sci-Fi",
+        "note": "The first book in the Expanse series. Space opera meets noir detective fiction.",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Artificial Condition",
+        "author": "Martha Wells",
+        "category": "Sci-FI",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "All Systems Red",
+        "author": "Martha Wells",
+        "category": "Sci-FI",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "The Count of Monte Cristo",
+        "author": "Alexandre Dumas",
+        "category": "Novel",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "A Man for All Markets",
+        "author": "Edward O. Throp",
+        "category": ["Autobiography", "Markets", "Non-Fiction"], 
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Monetary Policy Responses to the Post-Pandemic Inflation",
+        "author": "Various Authors",
+        "category": ["Markets", "Non-Fiction"],
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Black-Box Thinking",
+        "author": "Matthew Syed",
+        "category": ["Psychology", "Non-Fiction"],
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "Kafka on the Shore",
+        "author": "Haruki Murakami",
+        "category": "Novel",
+        "status": "completed",
+        "visible": true
+    }
+]

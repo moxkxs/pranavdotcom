@@ -1,0 +1,26 @@
+{
+  "name": "cyberpapyrus",
+  "version": "1.0.0",
+  "description": "Code, images, and writeups constituting my personal website, pranavdotcom.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moxkxs/pranavdotcom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/moxkxs/pranavdotcom/issues"
+  },
+  "homepage": "https://github.com/moxkxs/pranavdotcom#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
