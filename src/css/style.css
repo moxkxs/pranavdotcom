@@ -1036,6 +1036,10 @@ p {
     margin-bottom: 20px;
 }
 
+.post-body > :last-child {
+    margin-bottom: 0;
+}
+
 .post-body h3 {
     font-size: 1.3rem;
     font-weight: 600;
