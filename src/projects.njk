@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Projects
+permalink: /projects.html
+---
+<h2 class="page-title">Projects</h2>
+
+<p class="intro">
+    Things I've built
+</p>
+
+<div class="separator"></div>
+
+{%- set visibleProjects = projects | visible | sortByDate -%}
+
+<section class="projects-section">
+    {%- for proj in visibleProjects %}
+    <a href="/projects/{{ proj.slug }}.html" class="project-card">
+        <div class="project-card-body">
+            <h3 class="project-card-title">{{ proj.title }}</h3>
+            <p class="project-card-date">{{ proj.date | projectDate }}</p>
+            <p class="project-card-summary">{{ proj.summary }}</p>
+            {% if proj.details and proj.details.length %}
+            <ul class="project-card-details">
+                {%- for detail in proj.details %}
+                <li>{{ detail }}</li>
+                {%- endfor %}
+            </ul>
+            {% endif %}
+            {% if proj.tags and proj.tags.length %}
+            <div class="project-card-meta">
+                {%- for tag in proj.tags %}
+                <span class="project-tag">{{ tag }}</span>
+                {%- endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </a>
+    {%- endfor %}
+</section>

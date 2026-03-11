@@ -28,7 +28,7 @@
     </header>
     
     <main>
-        {% block content %}{% endblock %}
+        {{ content | safe }}
         
         <div id="site-footer">
             <div class="separator"></div>
@@ -56,6 +56,5 @@
     
     <script src="/js/theme-toggle.js"></script>
     <script src="/js/script.js"></script>
-    {% block scripts %}{% endblock %}
 </body>
 </html>

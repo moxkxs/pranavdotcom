@@ -8,11 +8,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });
     eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
-    // Custom filter: collect unique tags from posts array
-    eleventyConfig.addFilter("uniqueTags", function (posts) {
+    // Custom filter: collect unique tags from an array of items
+    eleventyConfig.addFilter("uniqueTags", function (items) {
         var tagSet = new Set();
-        (posts || []).forEach(function (post) {
-            (post.tags || []).forEach(function (tag) {
+        (items || []).forEach(function (item) {
+            (item.tags || []).forEach(function (tag) {
                 tagSet.add(tag);
             });
         });

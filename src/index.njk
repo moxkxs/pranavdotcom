@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+<div class="hero-section">
+    <img src="/images/profile.png" alt="Pranav" class="profile-pic">
+    <h2>Hell<span class="o o1">o</span><span class="o o2">o</span><span class="o o3">o</span><span class="o o4">o</span><span class="o o5">o</span><span class="o o6">o</span><span class="o o7">o</span><span class="o o8">o</span><span class="o o9">o</span><span class="o o10">o</span><span class="o o11">o</span><span class="o o12">o</span><span class="o o13">o</span><span class="o o14">o</span><span class="o o15">o</span><span class="o o16">o</span><span class="o o17">o</span><span class="o o18">o</span><span class="o o19">o</span><span class="o o20">o</span><span class="o o21">o</span><span class="o o22">o</span><span class="o o23">o</span></h2>
+</div>
+
+<p class="intro">
+    I'm Pranav, a newly minted graduate of the University of Virginia working for a macro hedge fund based in NYC
+</p>
+<div class="separator"></div>
+
+<section class="recent-posts">
+    <h3 class="section-heading">
+        <span class="reading-indicator active"></span>
+        Recent Writing
+    </h3>
+    <div id="recent-posts-list">
+        {%- set visiblePosts = writing | visible | sortByDate -%}
+        {%- for post in visiblePosts | batch(3) | first -%}
+        <article class="post-entry">
+            <a href="/posts/{{ post.slug }}.html" class="post-link-row">
+                <span class="post-row-title">{{ post.title }}</span>
+                <span class="post-row-line"></span>
+                <span class="post-row-date">{{ post.date | shortDate }}</span>
+            </a>
+        </article>
+        {%- endfor -%}
+    </div>
+    
+    <div class="all-posts-link">
+        <a href="/writing.html">all posts &#8594;</a>
+    </div>
+</section>
