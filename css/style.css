@@ -326,7 +326,7 @@ p {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .tag-filter {
