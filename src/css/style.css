@@ -25,7 +25,7 @@
 
     --logo-grad: linear-gradient(90deg, #8B7355, #A0826D, #FF6B35);
     --separator-mid: rgba(255, 107, 53, 0.8);
-    --separator-edge: rgba(255, 107, 53, 0.25);
+    --separator-edge: rgba(255, 107, 53, 0.3);
     --intro-base: #c0c0c0;
     --intro-peak: #FFFFFF;
     --tag-bg: #2a1810;
@@ -60,7 +60,7 @@
 
     --logo-grad: linear-gradient(90deg, #6D28D9, #8B5CF6, #7C3AED);
     --separator-mid: rgba(124, 58, 237, 0.7);
-    --separator-edge: rgba(124, 58, 237, 0.25);
+    --separator-edge: rgba(124, 58, 237, 0.3);
     --intro-base: #888899;
     --intro-peak: #1a1a2e;
     --tag-bg: rgba(124, 58, 237, 0.1);
@@ -386,12 +386,12 @@ p {
 }
 
 .post-tag {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--accent-light);
     background-color: var(--tag-bg);
-    padding: 2px 8px;
+    padding: 4px 10px;
     border-radius: 3px;
-    text-transform: lowercase;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -502,6 +502,7 @@ p {
 
 #site-footer .separator {
     margin: 0 0 20px;
+    animation-delay: -2.5s;
 }
 
 .footer-nav a {
@@ -1179,6 +1180,13 @@ p {
 
 .post-link-inline:hover {
     border-bottom-color: var(--accent);
+}
+
+/* Post divider (hr within post) */
+.post-divider {
+    border: none;
+    border-top: 1px solid var(--accent-20);
+    margin: 40px 0 24px;
 }
 
 /* Responsive */
