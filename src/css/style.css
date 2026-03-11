@@ -486,10 +486,6 @@ p {
     text-align: center;
 }
 
-*:has(+ #site-footer) {
-    margin-bottom: 0;
-}
-
 #site-footer {
     padding-top: 40px;
 }
@@ -1220,4 +1216,9 @@ p {
     .reading-stats { flex-direction: column; }
     .stat-number { font-size: 2rem; }
     .book-card { padding: 20px; }
+}
+
+/* Global footer adjacency — must come last to override all component margins */
+*:has(+ #site-footer) {
+    margin-bottom: 0;
 }
