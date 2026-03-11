@@ -113,6 +113,14 @@ body {
     height: 18px;
 }
 
+/* Dark mode (default): show moon, hide sun */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+/* Light mode: show sun, hide moon */
+[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
 /* Dot grid canvas background */
 #dotGrid {
     position: fixed;
