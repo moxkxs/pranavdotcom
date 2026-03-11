@@ -284,6 +284,16 @@ p {
     margin-bottom: 0;
 }
 
+#all-posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#all-posts-list .post-entry {
+    margin-bottom: 0;
+}
+
 /* Writing post entries (compact project-style layout) */
 .post-entry {
     margin-bottom: 30px;
@@ -487,7 +497,7 @@ p {
 }
 
 #site-footer {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 #site-footer .separator {
