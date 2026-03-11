@@ -74,8 +74,5 @@
         })
         .catch(function (err) {
             console.error('Failed to load bookshelf:', err);
-        })
-        .then(function () {
-            document.body.classList.add('ready');
         });
 })();

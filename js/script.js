@@ -94,8 +94,3 @@ animate();
 window.addEventListener('resize', () => {
     dots = createDots();
 });
-
-// Fallback reveal for pages without async data scripts
-window.addEventListener('load', function () {
-    document.body.classList.add('ready');
-});

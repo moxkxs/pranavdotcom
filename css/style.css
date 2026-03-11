@@ -83,12 +83,7 @@ body {
     padding: 40px 20px;
     position: relative;
     overflow-x: hidden;
-    opacity: 0;
-    transition: background-color 0.4s ease, color 0.4s ease, opacity 0.15s ease;
-}
-
-body.ready {
-    opacity: 1;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Theme toggle */
@@ -331,7 +326,11 @@ p {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin: -15px 0 25px 0;
+    margin-bottom: 25px;
+}
+
+.separator + .tag-filters {
+    margin-top: -15px;
 }
 
 .tag-filter {

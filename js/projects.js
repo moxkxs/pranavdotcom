@@ -60,8 +60,5 @@
         })
         .catch(function (err) {
             console.error('Failed to load projects:', err);
-        })
-        .then(function () {
-            document.body.classList.add('ready');
         });
 })();
