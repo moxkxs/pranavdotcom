@@ -1,19 +1,19 @@
 [
     {
-        "title": "Reflexivity in Financial Markets",
+        "title": "Test: Reflexivity in Financial Markets",
         "slug": "reflexivity-markets",
         "date": "2026-02-08",
         "summary": "The concept of reflexivity suggests that participants' perceptions actively shape the reality they're trying to predict, creating feedback loops that traditional models fail to capture.",
         "tags": ["markets", "trading"],
-        "visible": false
+        "visible": true
     },
     {
-        "title": "Understanding Volatility Surface Dynamics",
+        "title": "Test: Understanding Volatility Surface Dynamics",
         "slug": "vol-surface-dynamics",
         "date": "2026-01-15",
         "summary": "A deep dive into how implied volatility surfaces move and deform in response to market events. Examining the relationship between skew, term structure, and underlying price action.",
         "tags": ["markets", "quant"],
-        "visible": false
+        "visible": true
     },
     {
         "title": "Hello, World!",
