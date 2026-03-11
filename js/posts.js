@@ -95,6 +95,9 @@
         })
         .catch(function (err) {
             console.error('Failed to load posts:', err);
+        })
+        .then(function () {
+            document.body.classList.add('ready');
         });
 
     function buildPostCard(post, prefix) {
