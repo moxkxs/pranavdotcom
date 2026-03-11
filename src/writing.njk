@@ -42,32 +42,32 @@ permalink: /writing.html
         </article>
         {%- endfor %}
     </div>
+
+    <script>
+    (function () {
+        var tagContainer = document.getElementById('tag-filters');
+        if (!tagContainer) return;
+        var articles = document.querySelectorAll('.post-entry[data-tags]');
+
+        tagContainer.addEventListener('click', function (e) {
+            var btn = e.target.closest('.tag-filter');
+            if (!btn) return;
+            var tag = btn.dataset.tag;
+
+            tagContainer.querySelectorAll('.tag-filter').forEach(function (b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+
+            articles.forEach(function (article) {
+                if (tag === 'all') {
+                    article.style.display = '';
+                } else {
+                    var tags = article.dataset.tags.split(',');
+                    article.style.display = tags.indexOf(tag) !== -1 ? '' : 'none';
+                }
+            });
+        });
+    })();
+    </script>
 </section>
-
-<script>
-(function () {
-    var tagContainer = document.getElementById('tag-filters');
-    if (!tagContainer) return;
-    var articles = document.querySelectorAll('.post-entry[data-tags]');
-
-    tagContainer.addEventListener('click', function (e) {
-        var btn = e.target.closest('.tag-filter');
-        if (!btn) return;
-        var tag = btn.dataset.tag;
-
-        tagContainer.querySelectorAll('.tag-filter').forEach(function (b) {
-            b.classList.remove('active');
-        });
-        btn.classList.add('active');
-
-        articles.forEach(function (article) {
-            if (tag === 'all') {
-                article.style.display = '';
-            } else {
-                var tags = article.dataset.tags.split(',');
-                article.style.display = tags.indexOf(tag) !== -1 ? '' : 'none';
-            }
-        });
-    });
-})();
-</script>

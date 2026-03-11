@@ -56,5 +56,7 @@
     
     <script src="/js/theme-toggle.js"></script>
     <script src="/js/script.js"></script>
+    {% for s in extraScripts %}<script src="{{ s }}"></script>
+    {% endfor %}
 </body>
 </html>
