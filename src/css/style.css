@@ -25,7 +25,7 @@
 
     --logo-grad: linear-gradient(90deg, #8B7355, #A0826D, #FF6B35);
     --separator-mid: rgba(255, 107, 53, 0.8);
-    --separator-edge: rgba(255, 107, 53, 0.1);
+    --separator-edge: rgba(255, 107, 53, 0.25);
     --intro-base: #c0c0c0;
     --intro-peak: #FFFFFF;
     --tag-bg: #2a1810;
@@ -60,7 +60,7 @@
 
     --logo-grad: linear-gradient(90deg, #6D28D9, #8B5CF6, #7C3AED);
     --separator-mid: rgba(124, 58, 237, 0.7);
-    --separator-edge: rgba(124, 58, 237, 0.1);
+    --separator-edge: rgba(124, 58, 237, 0.25);
     --intro-base: #888899;
     --intro-peak: #1a1a2e;
     --tag-bg: rgba(124, 58, 237, 0.1);
@@ -1184,7 +1184,7 @@ p {
 /* Post divider (hr within post) */
 .post-divider {
     border: none;
-    border-top: 1px solid var(--border-light);
+    border-top: 1px solid var(--accent-20);
     margin: 40px 0 24px;
 }
 
