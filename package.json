@@ -4,7 +4,7 @@
     "description": "pranavdotcom.com",
     "scripts": {
         "build": "rm -rf _site && npx @11ty/eleventy",
-        "serve": "npx @11ty/eleventy --serve"
+        "serve": "DRAFTS=true npx @11ty/eleventy --serve"
     },
     "repository": {
         "type": "git",

@@ -22,8 +22,9 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("visible", function (items) {
+        var showDrafts = process.env.DRAFTS === "true";
         return (items || []).filter(function (item) {
-            return item.visible !== false;
+            return item.visible !== false || showDrafts;
         });
     });
 
