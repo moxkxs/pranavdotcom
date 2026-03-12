@@ -1,11 +1,21 @@
 /*
- * toc.js — active section highlighting for blog post sidebar
+ * toc.js — auto-generated table of contents with active section highlighting
  * Include on any page with .post-toc and .post-body h3[id]
  */
 document.addEventListener('DOMContentLoaded', function () {
-    var tocLinks = document.querySelectorAll('.post-toc a');
+    var toc = document.querySelector('.post-toc');
     var sections = document.querySelectorAll('.post-body h3[id]');
-    if (!tocLinks.length || !sections.length) return;
+    if (!toc || !sections.length) return;
+
+    // Auto-generate TOC links from headings
+    for (var i = 0; i < sections.length; i++) {
+        var link = document.createElement('a');
+        link.href = '#' + sections[i].id;
+        link.textContent = sections[i].textContent;
+        toc.appendChild(link);
+    }
+
+    var tocLinks = toc.querySelectorAll('a');
 
     function updateActive() {
         var current = '';
