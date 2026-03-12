@@ -1,0 +1,7 @@
+{%- set adj = writing | adjacentPosts(slug) -%}
+{% if adj.prev or adj.next %}
+<nav class="post-nav">
+    {% if adj.prev %}<a href="/writeups/{{ adj.prev.slug }}"><span class="post-nav-label">&larr; previous</span>{{ adj.prev.title }}</a>{% endif %}
+    {% if adj.next %}<a class="post-nav-next" href="/writeups/{{ adj.next.slug }}"><span class="post-nav-label">next &rarr;</span>{{ adj.next.title }}</a>{% endif %}
+</nav>
+{% endif %}

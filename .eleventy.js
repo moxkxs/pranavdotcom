@@ -59,6 +59,20 @@ module.exports = function (eleventyConfig) {
         return minutes + " min read";
     });
 
+    eleventyConfig.addFilter("adjacentPosts", function (items, slug) {
+        var showDrafts = process.env.DRAFTS === "true";
+        var sorted = (items || []).filter(function (item) {
+            return item.visible !== false || showDrafts;
+        }).slice().sort(function (a, b) {
+            return b.date.localeCompare(a.date);
+        });
+        var idx = sorted.findIndex(function (item) { return item.slug === slug; });
+        return {
+            prev: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+            next: idx > 0 ? sorted[idx - 1] : null
+        };
+    });
+
     eleventyConfig.addFilter("projectDate", function (dateStr) {
         var months = ['January','February','March','April','May','June',
                       'July','August','September','October','November','December'];
