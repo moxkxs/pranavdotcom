@@ -92,25 +92,17 @@ document.addEventListener('visibilitychange', function () {
     }
 });
 
-// Auto-fit hero heading to container width
+// Auto-fit hero heading on resize
 (function () {
     var h2 = document.querySelector('.hero-section h2');
     if (!h2) return;
-    var maxSize = 67;
-    var minSize = 24;
-    function fit() {
-        h2.style.fontSize = maxSize + 'px';
-        var size = maxSize;
-        while (h2.scrollWidth > h2.clientWidth && size > minSize) {
-            size -= 1;
-            h2.style.fontSize = size + 'px';
-        }
-        h2.style.visibility = 'visible';
-    }
-    fit();
     window.addEventListener('resize', function () {
         clearTimeout(h2._ft);
-        h2._ft = setTimeout(fit, 150);
+        h2._ft = setTimeout(function () {
+            var s = 67;
+            h2.style.fontSize = s + 'px';
+            while (h2.scrollWidth > h2.clientWidth && s > 24) h2.style.fontSize = --s + 'px';
+        }, 150);
     });
 })();
 
