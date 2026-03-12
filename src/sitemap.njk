@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://pranavdotcom.com/</loc>
+    </url>
+    <url>
+        <loc>https://pranavdotcom.com/writing</loc>
+    </url>
+    <url>
+        <loc>https://pranavdotcom.com/bookshelf</loc>
+    </url>
+    <url>
+        <loc>https://pranavdotcom.com/projects</loc>
+    </url>
+    {%- for post in writing | visible | sortByDate %}
+    <url>
+        <loc>https://pranavdotcom.com/writeups/{{ post.slug }}</loc>
+        <lastmod>{{ post.date }}</lastmod>
+    </url>
+    {%- endfor %}
+</urlset>
