@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Bookshelf
+permalink: /bookshelf.html
+extraScripts:
+  - /js/space-patrol.js
+---
+<h2 class="page-title">Bookshelf</h2>
+
+<p class="intro">
+    A sampling of the books you would find strewn across my room
+</p>
+
+<div class="separator"></div>
+
+{%- set visibleBooks = bookshelf | visible -%}
+{%- set reading = visibleBooks | byStatus("reading") -%}
+{%- set queue = visibleBooks | byStatus("queue") -%}
+{%- set completed = visibleBooks | byStatus("completed") -%}
+
+<!-- Reading Stats -->
+<div class="reading-stats">
+    <div class="stat-item">
+        <span class="stat-number">220</span>
+        <span class="stat-label">Want to Read</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">{{ completed | length }}</span>
+        <span class="stat-label">Have Read</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">{{ reading | length }}</span>
+        <span class="stat-label">Reading</span>
+    </div>
+</div>
+
+<!-- Currently Reading -->
+<section class="books-section">
+    <h3 class="section-heading">
+        <span class="reading-indicator active"></span>
+        Currently Reading
+    </h3>
+    <div id="books-reading">
+        {%- for book in reading %}
+        <div class="book-card current-reading">
+            <div class="book-info">
+                <h4 class="book-title">{{ book.title }}</h4>
+                <p class="book-author">{{ book.author }}</p>
+                {% if book.category %}
+                <div class="book-meta">
+                    {% if book.category is string %}
+                    <span class="book-category">{{ book.category }}</span>
+                    {% else %}
+                    {%- for cat in book.category %}
+                    <span class="book-category">{{ cat }}</span>
+                    {%- endfor %}
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% if book.note %}
+                <p class="book-note">{{ book.note }}</p>
+                {% endif %}
+            </div>
+        </div>
+        {%- endfor %}
+    </div>
+</section>
+
+<!-- Up Next -->
+<section class="books-section">
+    <h3 class="section-heading">
+        <span class="reading-indicator queue"></span>
+        Up Next
+    </h3>
+    <div id="books-queue" class="book-list-compact">
+        {%- for book in queue %}
+        <div class="compact-book">
+            <span class="compact-title">{{ book.title }}</span>
+            <span class="compact-author">— {{ book.author }}</span>
+        </div>
+        {%- endfor %}
+    </div>
+</section>
+
+<!-- Completed -->
+<section class="books-section">
+    <h3 class="section-heading">
+        <span class="reading-indicator completed"></span>
+        Completed
+    </h3>
+    <div id="books-completed" class="book-list-compact">
+        {%- for book in completed %}
+        <div class="compact-book">
+            <span class="compact-title">{{ book.title }}</span>
+            <span class="compact-author">— {{ book.author }}</span>
+        </div>
+        {%- endfor %}
+    </div>
+</section>
+
+<div class="space-patrol">Hopefully, that was an exhausting scroll! Have a reward, play a game!</div>

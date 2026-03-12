@@ -1,0 +1,16 @@
+{
+    "name": "cyberpapyrus",
+    "private": true,
+    "description": "pranavdotcom.com",
+    "scripts": {
+        "build": "rm -rf _site && npx @11ty/eleventy",
+        "serve": "npx @11ty/eleventy --serve"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/moxkxs/pranavdotcom.git"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^3.1.2"
+    }
+}
