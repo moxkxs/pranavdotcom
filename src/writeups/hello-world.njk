@@ -6,11 +6,12 @@ extraScripts:
   - /js/toc.js
   - /js/space-patrol.js
 ---
+{%- set meta = writing | findBySlug("hello-world") -%}
 <article class="post">
     <a href="/writing" class="post-back-link">&larr; back to writing</a>
 
     <h2 class="post-page-title">Hello, World!</h2>
-    <p class="post-page-date">&#x2734;&#x2734;&#x2734;&#x2734;&#x2734; &#x2734;&#x2734;, 2026</p>
+    <p class="post-page-date">{{ meta.date | postDate }}</p>
     <div class="disclaimer">
         <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>

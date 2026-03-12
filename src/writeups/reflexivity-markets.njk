@@ -5,11 +5,12 @@ permalink: /writeups/reflexivity-markets.html
 extraScripts:
   - /js/toc.js
 ---
+{%- set meta = writing | findBySlug("reflexivity-markets") -%}
 <article class="post">
     <a href="/writing" class="post-back-link">&larr; back to writing</a>
 
     <h2 class="post-page-title">Reflexivity in Financial Markets</h2>
-    <p class="post-page-date">February 8, 2026</p>
+    <p class="post-page-date">{{ meta.date | postDate }}</p>
 
     <div class="post-layout">
         <nav class="post-toc">

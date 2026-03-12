@@ -7,6 +7,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });
     eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
+    eleventyConfig.addFilter("findBySlug", function (items, slug) {
+        return (items || []).find(function (item) {
+            return item.slug === slug;
+        });
+    });
+
     eleventyConfig.addFilter("uniqueTags", function (items) {
         var tagSet = new Set();
         (items || []).forEach(function (item) {

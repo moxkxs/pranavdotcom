@@ -5,11 +5,12 @@ permalink: /writeups/vol-surface-dynamics.html
 extraScripts:
   - /js/toc.js
 ---
+{%- set meta = writing | findBySlug("vol-surface-dynamics") -%}
 <article class="post">
     <a href="/writing" class="post-back-link">&larr; back to writing</a>
 
     <h2 class="post-page-title">Understanding Volatility Surface Dynamics</h2>
-    <p class="post-page-date">January 15, 2026</p>
+    <p class="post-page-date">{{ meta.date | postDate }}</p>
 
     <div class="post-layout">
         <nav class="post-toc">
