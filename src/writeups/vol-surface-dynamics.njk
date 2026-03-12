@@ -6,6 +6,9 @@ permalink: /writeups/vol-surface-dynamics.html
 ogType: article
 extraScripts:
   - /js/toc.js
+  - /js/prism.min.js
+  - /js/prism-python.min.js
+  - /js/prism-rust.min.js
 ---
 {%- set meta = writing | findBySlug("vol-surface-dynamics") -%}
 {% set postBody %}
@@ -65,7 +68,7 @@ extraScripts:
 
         <p><strong>Contango (normal)</strong> &mdash; longer-dated vol is higher than shorter-dated. This is the default state. <strong>Backwardation (inverted)</strong> &mdash; front-month vol exceeds back-month. This signals acute near-term stress.</p>
 
-        <pre><code>def term_structure_slope(surface, front, back):
+        <pre><code class="language-python">def term_structure_slope(surface, front, back):
     """Positive = contango, Negative = backwardation"""
     front_atm = surface.get_atm_vol(front)
     back_atm = surface.get_atm_vol(back)

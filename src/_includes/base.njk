@@ -16,6 +16,7 @@
     {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
     <link rel="alternate" type="application/rss+xml" title="pranavdotcom" href="/feed.xml">
     <link rel="stylesheet" href="/css/style.css">
+    {% if ogType == 'article' %}<link rel="stylesheet" href="/css/prism-custom.css">{% endif %}
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <script src="/js/theme-init.js"></script>

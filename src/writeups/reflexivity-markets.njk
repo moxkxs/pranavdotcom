@@ -6,6 +6,9 @@ permalink: /writeups/reflexivity-markets.html
 ogType: article
 extraScripts:
   - /js/toc.js
+  - /js/prism.min.js
+  - /js/prism-python.min.js
+  - /js/prism-rust.min.js
 ---
 {%- set meta = writing | findBySlug("reflexivity-markets") -%}
 {% set postBody %}
@@ -25,7 +28,7 @@ extraScripts:
 
         <p>We can express the reflexive relationship between price and fundamentals with a basic formulation. Let <code>P(t)</code> represent the market price at time <code>t</code>, and <code>F(t)</code> represent the underlying fundamental value:</p>
 
-        <pre><code>P(t) = F(t) + β * ΔP(t-1) + ε(t)
+        <pre><code class="language-python">P(t) = F(t) + β * ΔP(t-1) + ε(t)
 
 where:
   β  = reflexivity coefficient (feedback strength)
@@ -59,7 +62,7 @@ where:
 
         <p>Here's a rough Python sketch for detecting reflexive regimes using autocorrelation of returns:</p>
 
-        <pre><code>import numpy as np
+        <pre><code class="language-python">import numpy as np
 import pandas as pd
 
 def reflexivity_indicator(returns, window=60):
