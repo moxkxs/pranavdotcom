@@ -373,29 +373,41 @@ h2 {
     font-size: 1.35rem;
     margin-bottom: 10px;
     margin-top: 0;
-    background: linear-gradient(
-        90deg,
-        var(--intro-base) 0%,
-        var(--intro-base) 40%,
-        var(--intro-peak) 50%,
-        var(--intro-base) 60%,
-        var(--intro-base) 100%
-    );
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: sheen 5s linear infinite;
+    color: var(--text-secondary);
 }
 
 /* ===================== */
 /* Page titles           */
 /* ===================== */
 
-.page-title {
-    font-size: 3rem;
+.page-title,
+.hero-section h2 {
+    font-size: 3.6rem;
     font-weight: 700;
     margin-bottom: 20px;
+    background: linear-gradient(
+        120deg,
+        var(--accent) 0%,
+        var(--accent) 30%,
+        var(--accent-light) 45%,
+        var(--accent-70) 55%,
+        var(--accent) 70%,
+        var(--accent) 100%
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: sheen 5s linear infinite;
+    filter: drop-shadow(2px 4px 0 var(--accent-40))
+           drop-shadow(4px 8px 0 var(--accent-20))
+           drop-shadow(0 6px 24px var(--accent-40));
+}
+
+.hero-section h2 {
+    font-size: clamp(3rem, 6.5vw, 4.2rem);
+    flex: 1;
+    min-width: 0;
 }
 
 .section-label {
@@ -1213,6 +1225,43 @@ h2 {
 }
 
 /* ===================== */
+/* 404 page              */
+
+.four-oh-four {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.four-oh-four .page-title {
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    filter: drop-shadow(2px 4px 0 var(--accent-40))
+           drop-shadow(4px 8px 0 var(--accent-20))
+           drop-shadow(0 6px 24px var(--accent-40));
+}
+
+
+.four-oh-four .disclaimer {
+    display: inline-flex;
+    text-align: left;
+}
+
+.four-oh-four-link {
+    margin-top: 32px;
+}
+
+.four-oh-four-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.four-oh-four-link a:hover {
+    color: var(--accent);
+}
+
 /* Responsive            */
 /* ===================== */
 
@@ -1251,7 +1300,7 @@ h2 {
         font-size: 0.85rem;
     }
 
-    .page-title { font-size: 2rem; }
+    .page-title { font-size: 2.4rem; }
 
     .project-card-body { padding: 20px; }
     .reading-stats { flex-direction: column; }
