@@ -92,6 +92,27 @@ document.addEventListener('visibilitychange', function () {
     }
 });
 
+// Auto-fit hero heading to container width
+(function () {
+    var h2 = document.querySelector('.hero-section h2');
+    if (!h2) return;
+    var maxSize = 67;
+    var minSize = 24;
+    function fit() {
+        h2.style.fontSize = maxSize + 'px';
+        var size = maxSize;
+        while (h2.scrollWidth > h2.clientWidth && size > minSize) {
+            size -= 1;
+            h2.style.fontSize = size + 'px';
+        }
+    }
+    fit();
+    window.addEventListener('resize', function () {
+        clearTimeout(h2._ft);
+        h2._ft = setTimeout(fit, 150);
+    });
+})();
+
 // Reading progress bar
 (function () {
     var bar = document.getElementById('progressBar');
