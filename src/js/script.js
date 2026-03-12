@@ -9,8 +9,10 @@ var maxDisplacement = 30;
 var dots = [];
 var dotColor = '';
 var mouse = { x: -1000, y: -1000 };
-var animating = true;
+var animating = false;
+var needsDraw = true;
 var resizeTimer;
+var idleFrames = 0;
 
 function getDotColor() {
     return getComputedStyle(document.documentElement)
@@ -20,6 +22,8 @@ dotColor = getDotColor();
 
 window.updateDotColor = function () {
     dotColor = getDotColor();
+    needsDraw = true;
+    startLoop();
 };
 
 function resizeCanvas() {
@@ -36,10 +40,18 @@ function createDots() {
     }
 }
 
+function startLoop() {
+    if (animating) return;
+    animating = true;
+    idleFrames = 0;
+    animate();
+}
+
 function animate() {
     if (!animating) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    var settled = true;
     for (var i = 0; i < dots.length; i++) {
         var dot = dots[i];
         var dx = mouse.x - dot.baseX;
@@ -52,9 +64,13 @@ function animate() {
             var angle = Math.atan2(dy, dx);
             dot.x = dot.baseX - Math.cos(angle) * displacement;
             dot.y = dot.baseY - Math.sin(angle) * displacement;
+            settled = false;
         } else {
-            dot.x += (dot.baseX - dot.x) * 0.01;
-            dot.y += (dot.baseY - dot.y) * 0.01;
+            dot.x += (dot.baseX - dot.x) * 0.05;
+            dot.y += (dot.baseY - dot.y) * 0.05;
+            if (Math.abs(dot.x - dot.baseX) > 0.1 || Math.abs(dot.y - dot.baseY) > 0.1) {
+                settled = false;
+            }
         }
 
         ctx.fillStyle = dotColor;
@@ -63,16 +79,37 @@ function animate() {
         ctx.fill();
     }
 
+    if (settled) {
+        idleFrames++;
+        if (idleFrames > 10) {
+            animating = false;
+            return;
+        }
+    } else {
+        idleFrames = 0;
+    }
+
     requestAnimationFrame(animate);
 }
 
 resizeCanvas();
 createDots();
+// Draw once then stop
+needsDraw = false;
+animating = true;
+idleFrames = 0;
 animate();
 
 document.addEventListener('mousemove', function (e) {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
+    startLoop();
+});
+
+document.addEventListener('mouseleave', function () {
+    mouse.x = -1000;
+    mouse.y = -1000;
+    startLoop();
 });
 
 window.addEventListener('resize', function () {
@@ -80,15 +117,13 @@ window.addEventListener('resize', function () {
     resizeTimer = setTimeout(function () {
         resizeCanvas();
         createDots();
+        startLoop();
     }, 150);
 });
 
 document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-        animating = false;
-    } else {
-        animating = true;
-        animate();
+    if (!document.hidden && !animating) {
+        startLoop();
     }
 });
 

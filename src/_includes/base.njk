@@ -18,6 +18,7 @@
     <link rel="alternate" type="application/rss+xml" title="pranavdotcom" href="/feed.xml">
     <link rel="stylesheet" href="/css/style.css">
     {% if ogType == 'article' %}<link rel="stylesheet" href="/css/prism-custom.css">{% endif %}
+    <link rel="preload" href="/images/profile.webp" as="image">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <script src="/js/theme-init.js"></script>
@@ -72,9 +73,9 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
 
-    <script src="/js/theme-toggle.js"></script>
-    <script src="/js/script.js"></script>
-    {% for s in extraScripts %}<script src="{{ s }}"></script>
+    <script defer src="/js/theme-toggle.js"></script>
+    <script defer src="/js/script.js"></script>
+    {% for s in extraScripts %}<script defer src="{{ s }}"></script>
     {% endfor %}
 </body>
 </html>
