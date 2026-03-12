@@ -92,6 +92,17 @@ document.addEventListener('visibilitychange', function () {
     }
 });
 
+// Reading progress bar
+(function () {
+    var bar = document.getElementById('progressBar');
+    if (!bar) return;
+    window.addEventListener('scroll', function () {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+})();
+
 // Back to top button
 (function () {
     var btn = document.querySelector('.back-to-top');

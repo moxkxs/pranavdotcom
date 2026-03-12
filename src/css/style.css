@@ -78,6 +78,18 @@
     box-sizing: border-box;
 }
 
+/* Reading progress bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--accent);
+    z-index: 1000;
+    transition: width 0.1s linear;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text-primary);
