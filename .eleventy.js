@@ -51,6 +51,13 @@ module.exports = function (eleventyConfig) {
         return d[1] + '.' + d[2] + '.' + d[0].slice(2);
     });
 
+    eleventyConfig.addFilter("readingTime", function (content) {
+        var text = (content || "").replace(/<[^>]*>/g, "");
+        var words = text.trim().split(/\s+/).length;
+        var minutes = Math.ceil(words / 230);
+        return minutes + " min read";
+    });
+
     eleventyConfig.addFilter("projectDate", function (dateStr) {
         var months = ['January','February','March','April','May','June',
                       'July','August','September','October','November','December'];

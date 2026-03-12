@@ -8,23 +8,7 @@ extraScripts:
   - /js/toc.js
 ---
 {%- set meta = writing | findBySlug("vol-surface-dynamics") -%}
-<article class="post">
-    <a href="/writing" class="post-back-link">&larr; back to writing</a>
-
-    <h2 class="post-page-title">Understanding Volatility Surface Dynamics</h2>
-    <p class="post-page-date">{{ meta.date | postDate }}</p>
-
-    <div class="post-layout">
-        <nav class="post-toc">
-            <a href="#what-is">What Is the Vol Surface?</a>
-            <a href="#three-dimensions">The Three Dimensions</a>
-            <a href="#skew">Skew Dynamics</a>
-            <a href="#term-structure">Term Structure Regimes</a>
-            <a href="#trading">Trading the Surface</a>
-            <a href="#whats-next">What's Next</a>
-        </nav>
-
-        <div class="post-body">
+{% set postBody %}
         <p>A deep dive into how implied volatility surfaces move and deform in response to market events. Examining the relationship between skew, term structure, and underlying price action.</p>
 
         <h3 id="what-is">What Is the Vol Surface?</h3>
@@ -128,6 +112,25 @@ extraScripts:
         <hr class="post-divider">
 
         <p><em>Recommended reading: Emanuel Derman's <a href="#" class="post-link-inline">The Volatility Smile</a> and Jim Gatheral's <a href="#" class="post-link-inline">The Volatility Surface</a>.</em></p>
+{% endset %}
+<article class="post">
+    <a href="/writing" class="post-back-link">&larr; back to writing</a>
+
+    <h2 class="post-page-title">Understanding Volatility Surface Dynamics</h2>
+    <p class="post-page-date">{{ meta.date | postDate }} &middot; {{ postBody | readingTime }}</p>
+
+    <div class="post-layout">
+        <nav class="post-toc">
+            <a href="#what-is">What Is the Vol Surface?</a>
+            <a href="#three-dimensions">The Three Dimensions</a>
+            <a href="#skew">Skew Dynamics</a>
+            <a href="#term-structure">Term Structure Regimes</a>
+            <a href="#trading">Trading the Surface</a>
+            <a href="#whats-next">What's Next</a>
+        </nav>
+
+        <div class="post-body">
+{{ postBody | safe }}
     </div>
     </div>
 </article>
