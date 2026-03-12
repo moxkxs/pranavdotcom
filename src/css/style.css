@@ -26,8 +26,6 @@
     --logo-grad: linear-gradient(90deg, #8B7355, #A0826D, #FF6B35);
     --separator-mid: rgba(255, 107, 53, 0.8);
     --separator-edge: rgba(255, 107, 53, 0.45);
-    --intro-base: #c0c0c0;
-    --intro-peak: #FFFFFF;
     --tag-bg: #2a1810;
     --toc-muted: #555555;
     --dot-color: #333333;
@@ -61,8 +59,6 @@
     --logo-grad: linear-gradient(90deg, #6D28D9, #8B5CF6, #7C3AED);
     --separator-mid: rgba(124, 58, 237, 0.7);
     --separator-edge: rgba(124, 58, 237, 0.45);
-    --intro-base: #888899;
-    --intro-peak: #1a1a2e;
     --tag-bg: rgba(124, 58, 237, 0.1);
     --toc-muted: #999aaa;
     --dot-color: #b8b8cc;
@@ -361,7 +357,18 @@ footer .separator {
     height: 123px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 15px var(--accent-20);
+    border: 2px solid var(--accent-40);
+    box-shadow: 0 0 15px var(--accent-20),
+                0 0 40px var(--accent-15),
+                0 4px 12px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(2px 4px 0 var(--accent-20))
+           drop-shadow(0 6px 16px var(--accent-40));
+    animation: pfpGlow 5s ease-in-out infinite;
+}
+
+@keyframes pfpGlow {
+    0%, 100% { box-shadow: 0 0 15px var(--accent-20), 0 0 40px var(--accent-15), 0 4px 12px rgba(0, 0, 0, 0.3); }
+    50% { box-shadow: 0 0 25px var(--accent-40), 0 0 60px var(--accent-20), 0 4px 12px rgba(0, 0, 0, 0.3); }
 }
 
 h2 {
