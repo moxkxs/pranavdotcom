@@ -369,8 +369,6 @@ h2 {
     font-weight: 700;
     margin-bottom: 0;
     white-space: nowrap;
-    overflow: hidden;
-    padding: 6px 0;
 }
 
 /* Intro paragraph with sheen */
@@ -930,6 +928,11 @@ h2 {
 .o {
     display: inline-block;
     animation: wave 3s ease-in-out infinite;
+    background: inherit;
+    background-size: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .o1 { animation-delay: 0s; }
@@ -958,7 +961,7 @@ h2 {
 
 @keyframes wave {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+    50% { transform: translateY(-6px); }
 }
 .o1 { font-size: 1em; }
 .o2 { font-size: 0.98em; }
