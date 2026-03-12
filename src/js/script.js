@@ -105,6 +105,7 @@ document.addEventListener('visibilitychange', function () {
             size -= 1;
             h2.style.fontSize = size + 'px';
         }
+        h2.style.visibility = 'visible';
     }
     fit();
     window.addEventListener('resize', function () {

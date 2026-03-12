@@ -407,6 +407,7 @@ h2 {
     font-size: clamp(3rem, 6.5vw, 4.2rem);
     flex: 1;
     min-width: 0;
+    visibility: hidden;
 }
 
 /* ===================== */
