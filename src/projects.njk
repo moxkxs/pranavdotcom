@@ -11,6 +11,8 @@ permalink: /projects.html
 
 <div class="separator"></div>
 
+{% set visibleProjects = projects | selectattr("visible") %}
+{% if visibleProjects | length == 0 %}
 <div class="disclaimer">
     <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
@@ -19,3 +21,32 @@ permalink: /projects.html
     </svg>
     <p>Currently project-ing. Please check back later!</p>
 </div>
+{% else %}
+<section class="projects-section">
+    <div id="projects-list">
+        {% for project in visibleProjects %}
+        <div class="project-card">
+            <div class="project-card-body">
+                <h3 class="project-card-title">{{ project.title }}</h3>
+                <p class="project-card-date">{{ project.date }}</p>
+                <p class="project-card-summary">{{ project.summary }}</p>
+                {% if project.details %}
+                <ul class="project-card-details">
+                    {% for detail in project.details %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if project.tags %}
+                <div class="project-card-meta">
+                    {% for tag in project.tags %}
+                    <span class="post-tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
