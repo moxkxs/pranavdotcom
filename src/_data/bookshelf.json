@@ -1,13 +1,5 @@
 [
     {
-        "title": "A Game of Thrones",
-        "author": "George R.R. Martin",
-        "category": "High Fantasy",
-        "note": "The first entry in GRRM's A Song of Ice and Fire series.",
-        "status": "reading",
-        "visible": true
-    },
-    {
         "title": "The Sun Also Rises",
         "author": "Ernest Hemingway",
         "category": "American Literature",
@@ -73,6 +65,14 @@
         "title": "The Hunt for Red October",
         "author": "Tom Clancy",
         "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "A Game of Thrones",
+        "author": "George R.R. Martin",
+        "category": "High Fantasy",
+        "note": "The first entry in GRRM's A Song of Ice and Fire series.",
+        "status": "reading",
         "visible": true
     },
     {
