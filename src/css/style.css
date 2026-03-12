@@ -357,18 +357,15 @@ footer .separator {
     height: 123px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent-40);
-    box-shadow: 0 0 15px var(--accent-20),
-                0 0 40px var(--accent-15),
-                0 4px 12px rgba(0, 0, 0, 0.3);
-    filter: drop-shadow(2px 4px 0 var(--accent-20))
-           drop-shadow(0 6px 16px var(--accent-40));
+    border: 1px solid var(--accent-20);
+    box-shadow: 0 0 12px var(--accent-10),
+                0 2px 8px rgba(0, 0, 0, 0.2);
     animation: pfpGlow 5s ease-in-out infinite;
 }
 
 @keyframes pfpGlow {
-    0%, 100% { box-shadow: 0 0 15px var(--accent-20), 0 0 40px var(--accent-15), 0 4px 12px rgba(0, 0, 0, 0.3); }
-    50% { box-shadow: 0 0 25px var(--accent-40), 0 0 60px var(--accent-20), 0 4px 12px rgba(0, 0, 0, 0.3); }
+    0%, 100% { box-shadow: 0 0 12px var(--accent-10), 0 2px 8px rgba(0, 0, 0, 0.2); }
+    50% { box-shadow: 0 0 18px var(--accent-20), 0 2px 8px rgba(0, 0, 0, 0.2); }
 }
 
 h2 {
