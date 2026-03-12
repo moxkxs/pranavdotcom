@@ -17,9 +17,9 @@
     },
     {
         "title": "Central Banking 101",
-        "author": "Joeseph Wang",
+        "author": "Joseph Wang",
         "category": "Markets",
-        "note": "Former FRBNY Open Markets Desk Trader Joeseph Wang offers a mental model to understand the dollar and its role in modern markets.",
+        "note": "Former FRBNY Open Markets Desk Trader Joseph Wang offers a mental model to understand the dollar and its role in modern markets.",
         "status": "reading",
         "visible": true
     },
@@ -100,14 +100,14 @@
     {
         "title": "Artificial Condition",
         "author": "Martha Wells",
-        "category": "Sci-FI",
+        "category": "Sci-Fi",
         "status": "completed",
         "visible": true
     },
     {
         "title": "All Systems Red",
         "author": "Martha Wells",
-        "category": "Sci-FI",
+        "category": "Sci-Fi",
         "status": "completed",
         "visible": true
     },
@@ -120,7 +120,7 @@
     },
     {
         "title": "A Man for All Markets",
-        "author": "Edward O. Throp",
+        "author": "Edward O. Thorp",
         "category": ["Autobiography", "Markets", "Non-Fiction"],
         "status": "completed",
         "visible": true
