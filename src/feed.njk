@@ -1,0 +1,25 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>pranavdotcom</title>
+        <link>https://pranavdotcom.com</link>
+        <description>Writing by Pranav Kandlakunta</description>
+        <language>en-us</language>
+        <atom:link href="https://pranavdotcom.com/feed.xml" rel="self" type="application/rss+xml"/>
+        {%- for post in writing | visible | sortByDate %}
+        <item>
+            <title>{{ post.title }}</title>
+            <link>https://pranavdotcom.com/writeups/{{ post.slug }}</link>
+            <guid>https://pranavdotcom.com/writeups/{{ post.slug }}</guid>
+            <pubDate>{{ post.date }}T00:00:00Z</pubDate>
+            {%- if post.summary %}
+            <description>{{ post.summary }}</description>
+            {%- endif %}
+        </item>
+        {%- endfor %}
+    </channel>
+</rss>
