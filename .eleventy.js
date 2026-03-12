@@ -40,9 +40,10 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    var months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+
     eleventyConfig.addFilter("postDate", function (dateStr) {
-        var months = ['January','February','March','April','May','June',
-                      'July','August','September','October','November','December'];
         var d = dateStr.split('-');
         return months[parseInt(d[1], 10) - 1] + ' ' + parseInt(d[2], 10) + ', ' + d[0];
     });
@@ -74,8 +75,6 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("projectDate", function (dateStr) {
-        var months = ['January','February','March','April','May','June',
-                      'July','August','September','October','November','December'];
         var d = dateStr.split('-');
         return months[parseInt(d[1], 10) - 1] + ' ' + d[0];
     });

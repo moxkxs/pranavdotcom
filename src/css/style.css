@@ -11,7 +11,6 @@
     --accent-60: rgba(255, 107, 53, 0.6);
     --accent-40: rgba(255, 107, 53, 0.4);
     --accent-20: rgba(255, 107, 53, 0.2);
-    --accent-15: rgba(255, 107, 53, 0.15);
     --accent-10: rgba(255, 107, 53, 0.1);
 
     --warm-bg: rgba(42, 24, 16, 0.3);
@@ -44,7 +43,6 @@
     --accent-60: rgba(124, 58, 237, 0.6);
     --accent-40: rgba(124, 58, 237, 0.4);
     --accent-20: rgba(124, 58, 237, 0.2);
-    --accent-15: rgba(124, 58, 237, 0.15);
     --accent-10: rgba(124, 58, 237, 0.1);
 
     --warm-bg: rgba(124, 58, 237, 0.06);
@@ -411,15 +409,6 @@ h2 {
     min-width: 0;
 }
 
-.section-label {
-    font-size: 0.95rem;
-    color: var(--text-dim);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    margin-top: 0;
-}
-
 /* ===================== */
 /* Post cards            */
 /* ===================== */
@@ -520,7 +509,6 @@ h2 {
 }
 
 .post-tag,
-.project-tag,
 .book-category {
     font-size: 0.75rem;
     color: var(--accent-light);
@@ -871,12 +859,6 @@ h2 {
     gap: 10px;
     margin-bottom: 15px;
     flex-wrap: wrap;
-}
-
-.book-rating {
-    font-size: 0.9rem;
-    color: var(--accent);
-    letter-spacing: 2px;
 }
 
 .book-note {
