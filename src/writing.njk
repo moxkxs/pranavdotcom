@@ -33,7 +33,7 @@ permalink: /writing.html
                 {% if post.tags and post.tags.length %}
                 <div class="post-tags">
                     {%- for tag in post.tags %}
-                    <a href="/writing/tag/{{ tag }}" class="post-tag" onclick="event.stopPropagation()">{{ tag }}</a>
+                    <span class="post-tag">{{ tag }}</span>
                     {%- endfor %}
                 </div>
                 {% endif %}
@@ -68,6 +68,7 @@ permalink: /writing.html
                 }
             });
         });
+
     })();
     </script>
 </section>
