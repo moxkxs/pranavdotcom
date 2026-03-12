@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}{% if title %} - {% endif %}Pranav Kandlakunta</title>
+    <meta property="og:title" content="{{ title if title else 'Pranav Kandlakunta' }}">
+    <meta property="og:type" content="{{ 'article' if ogType == 'article' else 'website' }}">
+    <meta property="og:url" content="https://pranavdotcom.com{{ page.url }}">
+    {% if description %}<meta property="og:description" content="{{ description }}">
+    <meta name="description" content="{{ description }}">{% endif %}
+    <meta property="og:site_name" content="pranavdotcom">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@moxkxs">
+    <meta name="twitter:title" content="{{ title if title else 'Pranav Kandlakunta' }}">
+    {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
