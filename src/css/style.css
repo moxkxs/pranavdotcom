@@ -357,9 +357,9 @@ footer .separator {
     height: 123px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid var(--accent-20);
-    box-shadow: 0 0 12px var(--accent-10),
-                0 2px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--accent-40);
+    box-shadow: 0 0 20px var(--accent-40),
+                0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
