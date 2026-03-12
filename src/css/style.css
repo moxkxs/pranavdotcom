@@ -1199,6 +1199,22 @@ h2 {
     margin-left: auto;
 }
 
+/* Tag page */
+.tag-back {
+    margin-bottom: 16px;
+}
+
+.tag-back a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.tag-back a:hover {
+    color: var(--accent);
+}
+
 /* ===================== */
 /* Responsive            */
 /* ===================== */

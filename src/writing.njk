@@ -33,7 +33,7 @@ permalink: /writing.html
                 {% if post.tags and post.tags.length %}
                 <div class="post-tags">
                     {%- for tag in post.tags %}
-                    <span class="post-tag">{{ tag }}</span>
+                    <a href="/writing/tag/{{ tag }}" class="post-tag" onclick="event.stopPropagation()">{{ tag }}</a>
                     {%- endfor %}
                 </div>
                 {% endif %}
