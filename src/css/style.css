@@ -1373,7 +1373,7 @@ h2 {
     }
 
     header {
-        margin-bottom: 16px;
+        margin-bottom: 28px;
     }
 
     .logo {
@@ -1400,7 +1400,11 @@ h2 {
     }
 
     .separator {
-        margin: 16px 0;
+        margin: 28px 0;
+    }
+
+    footer {
+        margin-top: 48px;
     }
 
     .section-heading {
