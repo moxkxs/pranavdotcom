@@ -1369,10 +1369,11 @@ h2 {
     }
 
     body {
-        padding: 20px 14px;
+        padding: 20px 20px;
         min-height: 100dvh;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
     }
 
     main {
@@ -1380,15 +1381,19 @@ h2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     /* --- nav group --- */
     header {
         margin-bottom: 24px;
+        flex-shrink: 0;
     }
 
     .logo {
         font-size: 1.15rem;
+        flex-shrink: 0;
     }
 
     .header-nav a {
@@ -1407,6 +1412,9 @@ h2 {
     }
 
     /* --- hero + intro group --- */
+    .hero-section {
+        max-width: 100%;
+    }
     .hero-section {
         margin-bottom: 10px;
     }
@@ -1438,6 +1446,8 @@ h2 {
     /* --- footer group --- */
     footer {
         margin-top: 40px;
+        flex-shrink: 0;
+        width: 100%;
     }
 
     .footer-nav a {
