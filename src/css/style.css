@@ -1350,6 +1350,14 @@ h2 {
         display: none;
     }
 
+    .hero-section h2 {
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+        -webkit-text-fill-color: var(--accent);
+        animation: none;
+    }
+
     .o {
         background: none;
         -webkit-background-clip: unset;
