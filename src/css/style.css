@@ -1363,6 +1363,9 @@ h2 {
         -webkit-background-clip: unset;
         background-clip: unset;
         -webkit-text-fill-color: var(--accent);
+        filter: drop-shadow(2px 4px 0 var(--accent-40))
+               drop-shadow(4px 8px 0 var(--accent-20))
+               drop-shadow(0 6px 24px var(--accent-40));
     }
 
     .header-nav a {
