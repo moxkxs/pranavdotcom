@@ -1368,13 +1368,57 @@ h2 {
                drop-shadow(0 6px 24px var(--accent-40));
     }
 
+    body {
+        padding: 20px 14px;
+    }
+
+    header {
+        margin-bottom: 16px;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
     .header-nav a {
-        margin-left: 15px;
-        font-size: 0.85rem;
+        margin-left: 8px;
+        font-size: 0.78rem;
+        padding: 4px 6px;
+    }
+
+    .header-right {
+        gap: 6px;
+    }
+
+    .theme-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .intro {
+        font-size: 1.05rem;
+    }
+
+    .separator {
+        margin: 16px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 8px;
+    }
+
+    .post-link-row {
+        padding: 6px 10px;
+        margin: 0 -10px;
+        gap: 10px;
+    }
+
+    .all-posts-link {
+        margin-top: 4px;
     }
 
     .footer-nav a {
-        margin-right: 15px;
+        margin-right: 12px;
         font-size: 0.85rem;
     }
 
