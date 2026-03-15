@@ -1372,8 +1372,9 @@ h2 {
         padding: 20px 14px;
     }
 
+    /* --- nav group --- */
     header {
-        margin-bottom: 44px;
+        margin-bottom: 24px;
     }
 
     .logo {
@@ -1395,35 +1396,38 @@ h2 {
         height: 30px;
     }
 
+    /* --- hero + intro group --- */
+    .hero-section {
+        margin-bottom: 10px;
+    }
+
     .intro {
         font-size: 1.05rem;
-        margin-bottom: 0;
     }
 
-    .hero-section {
-        margin-bottom: 6px;
-    }
-
+    /* --- between groups --- */
     .separator {
-        margin: 44px 0 12px;
+        margin: 28px 0;
     }
 
+    /* --- recent writing group --- */
     .section-heading {
-        margin-bottom: 4px;
-    }
-
-    .all-posts-link {
-        margin-top: 2px;
-    }
-
-    footer {
-        margin-top: 72px;
+        margin-bottom: 10px;
     }
 
     .post-link-row {
-        padding: 6px 10px;
+        padding: 8px 10px;
         margin: 0 -10px;
         gap: 10px;
+    }
+
+    .all-posts-link {
+        margin-top: 10px;
+    }
+
+    /* --- footer group --- */
+    footer {
+        margin-top: 40px;
     }
 
     .footer-nav a {
