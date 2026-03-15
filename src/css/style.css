@@ -1373,7 +1373,7 @@ h2 {
     }
 
     header {
-        margin-bottom: 28px;
+        margin-bottom: 44px;
     }
 
     .logo {
@@ -1397,28 +1397,33 @@ h2 {
 
     .intro {
         font-size: 1.05rem;
+        margin-bottom: 0;
+    }
+
+    .hero-section {
+        margin-bottom: 6px;
     }
 
     .separator {
-        margin: 28px 0;
-    }
-
-    footer {
-        margin-top: 48px;
+        margin: 44px 0 12px;
     }
 
     .section-heading {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
+    }
+
+    .all-posts-link {
+        margin-top: 2px;
+    }
+
+    footer {
+        margin-top: 72px;
     }
 
     .post-link-row {
         padding: 6px 10px;
         margin: 0 -10px;
         gap: 10px;
-    }
-
-    .all-posts-link {
-        margin-top: 4px;
     }
 
     .footer-nav a {
