@@ -1350,6 +1350,13 @@ h2 {
         display: none;
     }
 
+    .o {
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+        -webkit-text-fill-color: var(--accent);
+    }
+
     .header-nav a {
         margin-left: 15px;
         font-size: 0.85rem;
