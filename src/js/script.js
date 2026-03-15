@@ -100,17 +100,19 @@ animating = true;
 idleFrames = 0;
 animate();
 
-document.addEventListener('mousemove', function (e) {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-    startLoop();
-});
+if (window.innerWidth > 768) {
+    document.addEventListener('mousemove', function (e) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        startLoop();
+    });
 
-document.addEventListener('mouseleave', function () {
-    mouse.x = -1000;
-    mouse.y = -1000;
-    startLoop();
-});
+    document.addEventListener('mouseleave', function () {
+        mouse.x = -1000;
+        mouse.y = -1000;
+        startLoop();
+    });
+}
 
 window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
