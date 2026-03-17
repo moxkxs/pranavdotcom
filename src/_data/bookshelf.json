@@ -16,14 +16,6 @@
         "visible": true
     },
     {
-        "title": "In Cold Blood",
-        "author": "Truman Capote",
-        "category": ["True Crime", "Novel", "Non-Fiction"],
-        "note": "Along with Hunter S. Thompson and others, Truman Capote ushered in so-called New Journalism. An approach to journalism that does away with sterile, recall of events in favor of an approach that reels readers in with storytelling. I've only just begun the book, but I'm really enjoying Capote's prose.",
-        "status": "reading",
-        "visible": true
-    },
-    {
         "title": "Blood Meridian",
         "author": "Cormac McCarthy",
         "category": "Westerns",
@@ -83,6 +75,14 @@
         "title": "The Hunt for Red October",
         "author": "Tom Clancy",
         "status": "queue",
+        "visible": true
+    },
+    {
+        "title": "In Cold Blood",
+        "author": "Truman Capote",
+        "category": ["True Crime", "Novel", "Non-Fiction"],
+        "note": "Along with Hunter S. Thompson and others, Truman Capote ushered in so-called New Journalism. An approach to journalism that does away with sterile, recall of events in favor of an approach that reels readers in with storytelling. I've only just begun the book, but I'm really enjoying Capote's prose.",
+        "status": "completed",
         "visible": true
     },
     {
