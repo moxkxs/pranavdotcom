@@ -108,6 +108,13 @@
         "visible": true
     },
     {
+        "title": "Fear and Loathing in Las Vegas",
+        "author": "Agatha Christie",
+        "category": ["Mystery", "Novel"],
+        "status": "completed",
+        "visible": true
+    },
+    {
         "title": "Leviathan Wakes",
         "author": "James S.A. Corey",
         "category": "Sci-Fi",
