@@ -1,5 +1,21 @@
 [
     {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "category": "Science Fiction",
+        "note": "Hemingway's debut novel and the origin of the (in)famous Iceberg Theory. A glimpse into post World War I Europe through the eyes of expat journalist Jake Barnes.",
+        "status": "reading",
+        "visible": true
+    },
+    {
+        "title": "All Quiet on the Western Front",
+        "author": "Enrich Maria Remarque", 
+        "category": ["Novel", "War"],
+        "note": "A semi-autobiographical novel touching on the experiences of Imperial German soldiers during World War I. Purportedly, \"The Greatest War Novel of All Time\"",
+        "status": "reading",
+        "visible": true
+    },
+    {
         "title": "The Sun Also Rises",
         "author": "Ernest Hemingway",
         "category": "American Literature",
@@ -16,16 +32,16 @@
         "visible": true
     },
     {
+        "title": "Heart of Europe: A History of the Holy Roman Empire",
+        "author": "Peter H. Wilson",
+        "status": "queue",
+        "visible": true
+    },
+    {
         "title": "Blood Meridian",
         "author": "Cormac McCarthy",
         "category": "Westerns",
         "note": "Widely considered to be McCarthy's magnum opus. I wouldn't know as this is the first of his novels that I've picked up.",
-        "status": "reading",
-        "visible": true
-    },
-    {
-        "title": "Heart of Europe: A History of the Holy Roman Empire",
-        "author": "Peter H. Wilson",
         "status": "queue",
         "visible": true
     },
@@ -38,12 +54,6 @@
     {
         "title": "The City and Its Uncertain Walls",
         "author": "Haruki Murakami",
-        "status": "queue",
-        "visible": true
-    },
-    {
-        "title": "Dune",
-        "author": "Frank Herbert",
         "status": "queue",
         "visible": true
     },
