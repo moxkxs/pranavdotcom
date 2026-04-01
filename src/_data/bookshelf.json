@@ -50,6 +50,12 @@
         "visible": true
     },
     {
+        "title": "Dune Messiah",
+        "author": "Frank Herbert",
+        "status": "queue",
+        "visible": true
+    },
+    {
         "title": "Foundation",
         "author": "Isaac Asimov",
         "status": "queue",
