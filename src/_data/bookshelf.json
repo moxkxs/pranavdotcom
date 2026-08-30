@@ -4,7 +4,7 @@
         "author": "Enrich Maria Remarque", 
         "category": ["Novel", "War"],
         "note": "A semi-autobiographical novel touching on the experiences of Imperial German soldiers during World War I. Purportedly, \"The Greatest War Novel of All Time\"",
-        "status": "reading",
+        "status": "queue",
         "visible": true
     },
     {
@@ -20,7 +20,7 @@
         "author": "Joseph Wang",
         "category": "Markets",
         "note": "Former FRBNY Open Markets Desk Trader Joseph Wang offers a mental model to understand the dollar and its role in modern markets.",
-        "status": "reading",
+        "status": "completed",
         "visible": true
     },
     {
@@ -62,9 +62,21 @@
         "visible": true
     },
     {
+        "title": "A Storm of Swords",
+        "author": "George R.R. Martin",
+        "status": "completed",
+        "visible": true
+    },
+    {
+        "title": "A Feast for Crows",
+        "author": "George R.R. Martin",
+        "status": "completed",
+        "visible": true
+    },
+    {
         "title": "A Clash of Kings",
         "author": "George R.R. Martin",
-        "status": "queue",
+        "status": "completed",
         "visible": true
     },
     {
