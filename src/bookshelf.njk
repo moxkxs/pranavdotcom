@@ -72,11 +72,27 @@ extraScripts:
         <span class="reading-indicator queue"></span>
         Up Next
     </h3>
-    <div id="books-queue" class="book-list-compact">
+    <div id="books-queue">
         {%- for book in queue %}
-        <div class="compact-book">
-            <span class="compact-title">{{ book.title }}</span>
-            <span class="compact-author">— {{ book.author }}</span>
+        <div class="book-card current-reading">
+            <div class="book-info">
+                <h4 class="book-title">{{ book.title }}</h4>
+                <p class="book-author">{{ book.author }}</p>
+                {% if book.category %}
+                <div class="book-meta">
+                    {% if book.category is string %}
+                    <span class="book-category">{{ book.category }}</span>
+                    {% else %}
+                    {%- for cat in book.category %}
+                    <span class="book-category">{{ cat }}</span>
+                    {%- endfor %}
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% if book.note %}
+                <p class="book-note">{{ book.note }}</p>
+                {% endif %}
+            </div>
         </div>
         {%- endfor %}
     </div>
@@ -88,11 +104,27 @@ extraScripts:
         <span class="reading-indicator completed"></span>
         Completed
     </h3>
-    <div id="books-completed" class="book-list-compact">
+    <div id="books-completed">
         {%- for book in completed %}
-        <div class="compact-book">
-            <span class="compact-title">{{ book.title }}</span>
-            <span class="compact-author">— {{ book.author }}</span>
+        <div class="book-card current-reading">
+            <div class="book-info">
+                <h4 class="book-title">{{ book.title }}</h4>
+                <p class="book-author">{{ book.author }}</p>
+                {% if book.category %}
+                <div class="book-meta">
+                    {% if book.category is string %}
+                    <span class="book-category">{{ book.category }}</span>
+                    {% else %}
+                    {%- for cat in book.category %}
+                    <span class="book-category">{{ cat }}</span>
+                    {%- endfor %}
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% if book.note %}
+                <p class="book-note">{{ book.note }}</p>
+                {% endif %}
+            </div>
         </div>
         {%- endfor %}
     </div>
